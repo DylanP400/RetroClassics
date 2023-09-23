@@ -1,0 +1,113 @@
+/* ------------------------------------------------------------------------------------ General */
+html {
+    height: 100%;
+}
+
+body {
+    background-color: #3e7cb1;
+}
+
+.text-underline {
+    text-decoration: underline;
+}
+
+/* --------------------------------------------------------------------------------------- End */
+
+
+/* ------------------------------------------------- Nav */
+
+.dropdown-nested {
+    position: relative;
+}
+
+.dropdown-menu-nested {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+}
+
+.robo-font {
+    font-family: 'Roboto Slab', serif;
+}
+
+#nav-font {
+    font-family: 'Karma', serif;
+}
+
+#delivery-banner {
+    background-color: #054a91;
+    ;
+}
+
+/* ------------------------------------------------ End */
+
+
+/* ------------------------------ Custom colours */
+
+.blue {
+    color: #054a91;
+}
+
+.lt-blue {
+    color: #3e7cb1;
+}
+
+/* ------------------------------------- End */
+
+
+/* ----------------------------------------------- from Bulma */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.logo-font {
+    text-transform: uppercase;
+}
+
+.main-logo-link {
+    width: fit-content;
+}
+
+.btn-black {
+    background: black;
+    color: white;
+}
+
+.text-black {
+    color: #000 !important;
+}
+
+.border-black {
+    border: 1px solid black !important;
+}
+
+/* ----------------------------------------- End */
+
+/* -------------------------------- Media Queries */
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 80%;
+    }
+}
+
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .header-container {
+        padding-top: 164px;
+    }
+}

@@ -1,0 +1,115 @@
+<div class="collapse navbar-collapse" id="main-nav">
+    <ul class="navbar-nav w-auto mx-auto">
+        <li class="nav-item d-lg-none">
+            <a class="logo-font nav-link blue font-weight-bold mr-5" href="#" id="home-link">
+                <span class="blue text-underline">Home</span>
+            </a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="logo-font nav-link blue font-weight-bold mr-5" href="#" id="all-products-link"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="blue text-underline">All Products</span>
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
+                <a href="" class="dropdown-item lt-blue font-weight-bold">By Price</a>
+                <a href="" class="dropdown-item lt-blue font-weight-bold">By Rating</a>
+                <a href="" class="dropdown-item lt-blue font-weight-bold">By Category</a>
+                <a href="" class="dropdown-item lt-blue font-weight-bold">All Products</a>
+            </div>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link mr-5" href="#" id="clothing-link" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <span class="blue font-weight-bold text-underline">Consoles</span>
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
+                <div class="dropdown-item dropdown-nested">
+                    <a href="#" class="blue font-weight-bold" data-toggle="dropdown-nested">PlayStation</a>
+                    <div class="dropdown-menu dropdown-menu-nested">
+                        <a href="#" class="dropdown-item lt-blue font-weight-bold">Playstation 1</a>
+                        <a href="#" class="dropdown-item lt-blue font-weight-bold">Playstation 2</a>
+                    </div>
+                </div>
+                <div class="dropdown-item dropdown-nested">
+                    <a href="#" class="blue font-weight-bold" data-toggle="dropdown-nested">Nintendo</a>
+                    <div class="dropdown-menu dropdown-menu-nested">
+                        <a href="#" class="dropdown-item lt-blue font-weight-bold">Nintendo(SNES)</a>
+                        <a href="#" class="dropdown-item lt-blue font-weight-bold">Nintendo 64</a>
+                    </div>
+                </div>
+                <div class="dropdown-item dropdown-nested">
+                    <a href="#" class="blue font-weight-bold" data-toggle="dropdown-nested">Sega</a>
+                    <div class="dropdown-menu dropdown-menu-nested">
+                        <a href="#" class="dropdown-item lt-blue font-weight-bold">Sega Genesis</a>
+                    </div>
+                </div>
+                <div class="dropdown-item dropdown-nested">
+                    <a href="#" class="blue font-weight-bold" data-toggle="dropdown-nested">Handheld</a>
+                    <div class="dropdown-menu dropdown-menu-nested">
+                        <a href="#" class="dropdown-item lt-blue font-weight-bold">Game Boy Advanced</a>
+                        <a href="#" class="dropdown-item lt-blue font-weight-bold">Playstation Portable</a>
+                    </div>
+                </div>
+                <div class="dropdown-item dropdown-nested">
+                    <a href="#" class="blue font-weight-bold" data-toggle="dropdown-nested">Emulation</a>
+                    <div class="dropdown-menu dropdown-menu-nested">
+                        <a href="#" class="dropdown-item lt-blue font-weight-bold">Raspberry Pi 4</a>
+                    </div>
+                </div>
+            </div>
+        </li>
+
+
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link blue mr-5" href="#" id="games-link" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <span class="blue text-underline">Games</span>
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="games-link">
+                <a href="" class="dropdown-item lt-blue font-weight-bold">Playstaion One</a>
+                <a href="#" class="dropdown-item lt-blue font-weight-bold">Playstaion Two</a>
+                <a href="#" class="dropdown-item lt-blue font-weight-bold">Playstation Portable</a>
+                <a href="" class="dropdown-item lt-blue font-weight-bold">Super Nintendo</a>
+                <a href="" class="dropdown-item lt-blue font-weight-bold">Nintendo 64</a>
+                <a href="" class="dropdown-item lt-blue font-weight-bold">Sega Genesis</a>
+                <a href="" class="dropdown-item lt-blue font-weight-bold">Raspberry Pi 4</a>
+                <a href="" class="dropdown-item lt-blue font-weight-bold">Game Boy Advanced</a>
+                <a href="#" class="dropdown-item lt-blue font-weight-bold"></a>
+            </div>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link text-black" href="#" id="specials-link" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <span class="blue text-underline">Special Offers</span>
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="specials-link">
+                <a href="" class="dropdown-item lt-blue font-weight-bold">New Arrivals</a>
+                <a href="" class="dropdown-item lt-blue font-weight-bold">Deals</a>
+                <a href="" class="dropdown-item lt-blue font-weight-bold">Clearance</a>
+                <a href="" class="dropdown-item lt-blue font-weight-bold">All Specials</a>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<script>
+    $(document).ready(function () {
+        // For the nested nav elements
+        $('[data-toggle="dropdown-nested"]').on("click", function (e) {
+            $(this).next('.dropdown-menu-nested').toggle();
+            e.stopPropagation();
+            e.preventDefault();
+        });
+        // Hide nested dropdown when mouse leaves the main dropdown
+        $('.dropdown-menu').mouseleave(function () {
+            $('.dropdown-menu-nested').hide();
+        });
+        // Hide nested dropdown when clicking outside of the main dropdown
+        $(document).on("click", function (event) {
+            if (!$(event.target).closest('.dropdown-menu').length) {
+                $('.dropdown-menu-nested').hide();
+            }
+        });
+    });
+</script>
