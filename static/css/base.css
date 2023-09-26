@@ -52,39 +52,6 @@ body {
 
 /* ------------------------------------------------------------------------------------- End */
 
-/* -------------------------------------------------------------------------------------- Callout */
-
-
-.callout-display {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    padding-top: 50px;
-}
-
-/* font sizes
-3.125rem = 50px
-1.875rem = 30px
-*/
-
-.callout-head {
-    font-size: 3.125rem;
-}
-
-.callout-p {
-    font-size: 1.875rem
-}
-
-
-.shop-now-btn {
-    background-color: #054a91;
-    border: 2px solid white;
-    cursor: pointer;
-
-}
-
-/* --------------------------------------------------------------------------------------- End */
-
 /* ------------------------------------------------- Nav */
 
 .dropdown-nested {
@@ -119,8 +86,49 @@ header {
 }
 
 
+.btn-blue {
+    background: #054a91;
+    color: white;
+}
+
+.border-black {
+    border: 2px solid #054a91 !important;
+}
+
 /* ------------------------------------------------ End */
 
+/* -------------------------------------------------------------------------------------- Callout */
+
+
+.callout-display {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding-top: 50px;
+}
+
+/* font sizes
+3.125rem = 50px
+1.875rem = 30px
+*/
+
+.callout-head {
+    font-size: 3.125rem;
+}
+
+.callout-p {
+    font-size: 1.875rem
+}
+
+
+.shop-now-btn {
+    background-color: #054a91;
+    border: 2px solid white;
+    cursor: pointer;
+
+}
+
+/* --------------------------------------------------------------------------------------- End */
 
 
 /* ----------------------------------------------- from Bulma */
