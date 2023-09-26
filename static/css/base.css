@@ -1,18 +1,89 @@
 /* ------------------------------------------------------------------------------------ General */
-html {
+
+body {
+    background: url('/media/arcade-machines.jpg') no-repeat center center fixed;
+    background-size: cover;
     height: 100%;
 }
 
-body {
-    background-color: #3e7cb1;
+/* ------------------------------ Custom colours */
+
+.blue {
+    color: #054a91;
+}
+
+.lt-blue {
+    color: #3e7cb1;
+}
+
+/* ------------------------------------- End */
+
+/* ----------------------------------------- Fonts */
+.robo-font {
+    font-family: 'Roboto Slab', serif;
+}
+
+.karma-font {
+    font-family: 'Karma', serif;
+}
+
+/* ------------------------------------------- End */
+
+/* ------------------------------------------------------------------------------------- End */
+
+
+/* ------------------------------------------------------------------------------------ Home page */
+
+
+.darken-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .text-underline {
     text-decoration: underline;
 }
 
-/* --------------------------------------------------------------------------------------- End */
 
+/* ------------------------------------------------------------------------------------- End */
+
+/* -------------------------------------------------------------------------------------- Callout */
+
+
+.callout-display {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding-top: 50px;
+}
+
+/* font sizes
+3.125rem = 50px
+1.875rem = 30px
+*/
+
+.callout-head {
+    font-size: 3.125rem;
+}
+
+.callout-p {
+    font-size: 1.875rem
+}
+
+
+.shop-now-btn {
+    background-color: #054a91;
+    border: 2px solid white;
+    cursor: pointer;
+
+}
+
+/* --------------------------------------------------------------------------------------- End */
 
 /* ------------------------------------------------- Nav */
 
@@ -31,29 +102,25 @@ body {
     font-family: 'Roboto Slab', serif;
 }
 
-#nav-font {
+.sm-icons {
+    font-size: 10px;
+}
+
+.nav-font {
     font-family: 'Karma', serif;
 }
 
 #delivery-banner {
     background-color: #054a91;
-    ;
 }
+
+header {
+    height: auto;
+}
+
 
 /* ------------------------------------------------ End */
 
-
-/* ------------------------------ Custom colours */
-
-.blue {
-    color: #054a91;
-}
-
-.lt-blue {
-    color: #3e7cb1;
-}
-
-/* ------------------------------------- End */
 
 
 /* ----------------------------------------------- from Bulma */
@@ -71,19 +138,6 @@ body {
 
 .main-logo-link {
     width: fit-content;
-}
-
-.btn-black {
-    background: black;
-    color: white;
-}
-
-.text-black {
-    color: #000 !important;
-}
-
-.border-black {
-    border: 1px solid black !important;
 }
 
 /* ----------------------------------------- End */
@@ -109,5 +163,21 @@ body {
 
     .header-container {
         padding-top: 164px;
+    }
+
+}
+
+/* Mobile view */
+@media (max-width: 991px) {
+    #delivery-banner h4 {
+        font-size: .9rem;
+    }
+
+    .callout-head {
+        font-size: 30px;
+    }
+
+    .callout-p {
+        font-size: 25px
     }
 }
