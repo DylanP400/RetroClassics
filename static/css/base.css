@@ -150,6 +150,37 @@ header {
 
 /* ----------------------------------------- End */
 
+/* allauth pages login, signup, logout, forgot password */
+
+.allauth-containers {
+    margin: 220px 350px 60px 350px;
+    padding: 40px;
+    background-color: #054a91;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    border: 2px solid #3e7cb1;
+    border-radius: 120px;
+    box-shadow: 0 0 15px #3e7cb1;
+    transition: box-shadow 0.3s;
+    font-size: 21px;
+    font-family: karla;
+}
+
+.allauth-containers a {
+    color: yellow;
+}
+
+.allauth-containers:hover {
+    box-shadow: 0 0 25px #3e7cb1, 0 0 50px #3e7cb1;
+}
+
+/* -------------------------------------------------------End
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -187,5 +218,16 @@ header {
 
     .callout-p {
         font-size: 25px
+    }
+
+    .allauth-containers {
+        margin: 80px 20px 80px 20px;
+        padding: 40px;
+        font-size: 18px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
     }
 }
