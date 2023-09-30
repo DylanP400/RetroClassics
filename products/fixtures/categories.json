@@ -1,0 +1,153 @@
+[{
+        "pk": 1,
+        "model": "products.category",
+        "fields": {
+            "name": "playstation_one_console",
+            "display_name": "Playstation One"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "products.category",
+        "fields": {
+            "name": "playstation_two_console",
+            "display_name": "Playstation Two"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "products.category",
+        "fields": {
+            "name": "clearance",
+            "display_name": "Clearance"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "products.category",
+        "fields": {
+            "name": "deals",
+            "display_name": "Deals"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "products.category",
+        "fields": {
+            "name": "nintendo_64_console",
+            "display_name": "Nintendo 64"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "products.category",
+        "fields": {
+            "name": "new_arrivals",
+            "display_name": "New Arrivals"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "products.category",
+        "fields": {
+            "name": "nintendo_snes_console",
+            "display_name": "Nintendo SNES"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "products.category",
+        "fields": {
+            "name": "sega_genesis_console",
+            "display_name": "Sega Genesis"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "products.category",
+        "fields": {
+            "name": "gameboy_advanced_console",
+            "display_name": "Gameboy Advanced"
+        }
+    },
+    {
+        "pk": 12,
+        "model": "products.category",
+        "fields": {
+            "name": "playstation_portable_console",
+            "display_name": "PlayStation Portable"
+        }
+    },
+    {
+        "pk": 13,
+        "model": "products.category",
+        "fields": {
+            "name": "raspberry_pi_console",
+            "display_name": "Raspberry Pi 4"
+        }
+    },
+    {
+        "pk": 14,
+        "model": "products.category",
+        "fields": {
+            "name": "playstation_one",
+            "display_name": "Playstation One"
+        }
+    },
+    {
+        "pk": 15,
+        "model": "products.category",
+        "fields": {
+            "name": "playstation_two",
+            "display_name": "Playstation Two"
+        }
+    },
+    {
+        "pk": 16,
+        "model": "products.category",
+        "fields": {
+            "name": "nintendo_64",
+            "display_name": "Nintendo 64"
+        }
+    },
+    {
+        "pk": 17,
+        "model": "products.category",
+        "fields": {
+            "name": "nintendo_snes",
+            "display_name": "Nintendo SNES"
+        }
+    },
+    {
+        "pk": 18,
+        "model": "products.category",
+        "fields": {
+            "name": "sega_genesis",
+            "display_name": "Sega Genesis"
+        }
+    },
+    {
+        "pk": 19,
+        "model": "products.category",
+        "fields": {
+            "name": "gameboy_advanced",
+            "display_name": "Gameboy Advanced"
+        }
+    },
+    {
+        "pk": 20,
+        "model": "products.category",
+        "fields": {
+            "name": "playstation_portable",
+            "display_name": "PlayStation Portable"
+        }
+    },
+    {
+        "pk": 21,
+        "model": "products.category",
+        "fields": {
+            "name": "raspberry_pi",
+            "display_name": "Raspberry Pi 4"
+        }
+    }
+]
