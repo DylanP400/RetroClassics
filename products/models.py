@@ -30,6 +30,7 @@ class Product(models.Model):
     rating = models.PositiveIntegerField(null=True,)
     price = models.DecimalField(max_digits=6, decimal_places=2)
     release_date = models.DateField(auto_now_add=True, null=True)
+    players = models.PositiveIntegerField(null=True,)
 
     def __str__(self):
         return self.name
@@ -39,7 +40,6 @@ class Game(Product):
     developer = models.CharField(max_length=254, null=True,)
     publisher = models.CharField(max_length=254, null=True,)
     pgi_certificate = models.CharField(max_length=254, null=True, blank=True)
-    players = models.PositiveIntegerField(null=True,)
     CONSOLE_CHOICES = (
         ('Playstation_one', 'Playstation One'),
         ('Playstation_two', 'Playstation Two'),
@@ -72,7 +72,6 @@ class Game(Product):
 
 
 class Console(Product):
-    players = models.PositiveIntegerField(null=True,)
     colour = models.CharField(max_length=100, null=True)
     manufacturer = models.CharField(max_length=254, null=True,)
     storage = models.CharField(max_length=254, null=True,)

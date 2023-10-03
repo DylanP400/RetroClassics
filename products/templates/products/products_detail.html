@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="overlay"></div>
+<div class="container-fluid mb-4 mt-1">
+    <div class="row product-detail">
+        <div class="col-md-4 col-sm-12">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card h-100 product-card karma-font">
+                        {% if product.image %}
+                        <a href="{{ product.img.url }}" target="_blank">
+                            <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                        </a>
+                        {% else %}
+                        <a href="{{ product.img.url }}">
+                            <img class="card-img-top" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                        </a>
+                        {% endif %}
+                        <div class="card-body">
+                            <h5 class="card-title text-center m-0 text-black prod-name">{{ product.name }}</h5>
+                        </div>
+                        <div class="card-footer blue">
+                            <p class="card-text text-center prod-price"> <span class="font-weight-bold">Price:</span>
+                                £{{ product.price }}</p>
+                            <hr class="mb-1 text-white text-center m-3">
+                            <p class="card-text text-center mt-2 mb-2">
+                                {{ product.description }}</p>
+                            <hr class="mb-1 text-white text-center mb-2">
+                            <div class="row">
+                                <div class="col-md-6 col-12">
+                                    <p class="card-text text-left">
+                                        <span class="font-weight-bold my-5">Rating:</span> <i
+                                            class="fa-sharp fa-solid fa-star fa-2xs"></i>
+                                        {{ product.rating }} / 5</p>
+                                    {% if product.players %}
+                                    <p class="card-text text-left"> <span class="font-weight-bold">Players: </span>
+                                        {{ product.players }}</p>
+                                    {% else %}
+                                    <p class="card-text text-left"> <span class="font-weight-bold">Players: </span>
+                                        2</p>
+                                    {% endif %}
+                                    {% if product.release_date %}
+                                    <p class="card-text text-left"> <span class="font-weight-bold">Release
+                                            Date:</span> {{ product.release_date }}</p>
+                                    {% else %}
+                                    <p class="card-text text-left"> <span class="font-weight-bold">Release
+                                            Date:</span> 01/01/2000</p>
+                                    {% endif %}
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <!--For Console products-->
+                                    {% if product.console.colour %}
+                                    <p class="card-text text-left"> <span class="font-weight-bold">Colour:</span>
+                                        {{ product.console.colour }}</p>
+                                    {% else %}
+                                    <p class="card-text d-none d-md-none"> <span class="font-weight-bold">None</span>
+                                    </p>
+                                    {% endif %}
+                                    {% if product.console.manufacturer %}
+                                    <p class="card-text text-left"> <span class="font-weight-bold">Manufacturer:</span>
+                                        {{ product.console.manufacturer }}</p>
+                                    {% else %}
+                                    <p class="card-text d-none d-md-none"> <span class="font-weight-bold">None</span>
+                                    </p>
+                                    {% endif %}
+                                    {% if product.console.storage %}
+                                    <p class="card-text text-left"> <span class="font-weight-bold">Storage:</span>
+                                        {{ product.console.storage }}</p>
+                                    {% else %}
+                                    <p class="card-text d-none d-md-none"> <span class="font-weight-bold">None</span>
+                                    </p>
+                                    {% endif %}
+                                    <!--For Game products-->
+                                    {% if product.game.pgi_certificate %}
+                                    <p class="card-text text-left"> <span class="font-weight-bold">Age:</span>
+                                        {{ product.game.pgi_certificate }}</p>
+                                    {% else %}
+                                    <p class="card-text text-left d-none d-md-none">None</p>
+                                    {% endif %}
+                                    {% if product.game.developer %}
+                                    <p class="card-text text-left"> <span class="font-weight-bold">Developer:</span>
+                                        {{ product.game.developer }}</p>
+                                    {% else %}
+                                    <p class="card-text text-left d-none d-md-none">None</p>
+                                    {% endif %}
+                                    {% if product.game.publisher %}
+                                    <p class="card-text text-left"> <span class="font-weight-bold">Publisher:</span>
+                                        {{ product.game.publisher }}</p>
+                                    {% else %}
+                                    <p class="card-text text-left d-none d-md-none">None</p>
+                                    {% endif %}
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -10,6 +10,10 @@ hr {
     background-color: white;
 }
 
+p {
+    margin: 0;
+}
+
 /* ------------------------------ Custom colours */
 
 .blue {
@@ -165,12 +169,22 @@ header {
 .card-footer {
     background-color: #054a91;
     color: white;
-    font-size: 20px;
+    font-size: 18px;
 }
 
-.card-footer>p {
-    margin: 0 !important;
-    padding: 0 !important;
+.product-detail {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.prod-name {
+    font-size: 30px;
+}
+
+.prod-price {
+    font-size: 25px;
 }
 
 /* ------------------------------------------------------------------------------ End */
@@ -273,5 +287,37 @@ header {
         justify-content: center;
         align-items: center;
         flex-direction: column;
+    }
+
+    .product-card {
+        border: 3px solid #054a91;
+        font-family: karla;
+    }
+
+    .card-img-top {
+        height: 200px;
+        object-fit: contain;
+    }
+
+    .card-footer {
+        background-color: #054a91;
+        color: white;
+        font-size: 16px;
+    }
+
+    .product-detail {
+        padding: 0px;
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .prod-name {
+        font-size: 20px;
+    }
+
+    .prod-price {
+        font-size: 18px;
     }
 }
