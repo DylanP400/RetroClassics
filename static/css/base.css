@@ -6,6 +6,10 @@ body {
     height: 100%;
 }
 
+hr {
+    background-color: white;
+}
+
 /* ------------------------------ Custom colours */
 
 .blue {
@@ -14,6 +18,14 @@ body {
 
 .lt-blue {
     color: #3e7cb1;
+}
+
+.border-black {
+    border: 2px solid #054a91 !important;
+}
+
+.text-black {
+    color: black;
 }
 
 /* ------------------------------------- End */
@@ -91,10 +103,6 @@ header {
     color: white;
 }
 
-.border-black {
-    border: 2px solid #054a91 !important;
-}
-
 /* ------------------------------------------------ End */
 
 /* -------------------------------------------------------------------------------------- Callout */
@@ -130,6 +138,42 @@ header {
 
 /* --------------------------------------------------------------------------------------- End */
 
+/* ------------------------------------------------------------------------------ Products */
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: #3e7cb1;
+    z-index: -1;
+
+}
+
+.product-card {
+    border: 3px solid #054a91;
+    font-family: karla;
+}
+
+
+.card-img-top {
+    height: 200px;
+    object-fit: contain;
+}
+
+.card-footer {
+    background-color: #054a91;
+    color: white;
+    font-size: 20px;
+}
+
+.card-footer>p {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* ------------------------------------------------------------------------------ End */
 
 /* ----------------------------------------------- from Bulma */
 .icon {
