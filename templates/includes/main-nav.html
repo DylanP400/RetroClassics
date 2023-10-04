@@ -8,7 +8,7 @@
             </a>
         </div>
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-            <form method="GET" action="">
+            <form method="GET" action="{% url 'products' %}">
                 <div class="input-group w-100">
                     <input class="form-control border border-black rounded-0" type="text" name="q"
                         placeholder="Insert Coin">
@@ -91,44 +91,54 @@
                         </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="logo-font font-weight-bold nav-link mr-5" href="#" id="clothing-link"
+                        <a class="logo-font font-weight-bold nav-link mr-5" href="#" id="console-link"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <span class="blue font-weight-bold text-underline">Consoles</span>
                         </a>
-                        <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
+                        <div class="dropdown-menu border-0" aria-labelledby="console-link">
                             <div class="dropdown-item dropdown-nested">
                                 <a href="#" class="blue font-weight-bold" data-toggle="dropdown-nested">Playstation</a>
                                 <div class="dropdown-menu dropdown-menu-nested">
-                                    <a href="#" class="dropdown-item lt-blue font-weight-bold">Playstation 1</a>
-                                    <a href="#" class="dropdown-item lt-blue font-weight-bold">Playstation 2</a>
+                                    <a href="{% url 'products' %}?category=playstation_one_console"
+                                        class="dropdown-item lt-blue font-weight-bold">Playstation 1</a>
+                                    <a href="{% url 'products' %}?category=playstation_two_console"
+                                        class="dropdown-item lt-blue font-weight-bold">Playstation 2</a>
                                 </div>
                             </div>
                             <div class="dropdown-item dropdown-nested">
                                 <a href="#" class="blue font-weight-bold" data-toggle="dropdown-nested">Nintendo</a>
                                 <div class="dropdown-menu dropdown-menu-nested">
-                                    <a href="#" class="dropdown-item lt-blue font-weight-bold">Nintendo(SNES)</a>
-                                    <a href="#" class="dropdown-item lt-blue font-weight-bold">Nintendo 64</a>
+                                    <a href="{% url 'products' %}?category=nintendo_snes_console"
+                                        class="dropdown-item lt-blue font-weight-bold">Nintendo(SNES)</a>
+                                    <a href="{% url 'products' %}?category=nintendo_64_console"
+                                        class="dropdown-item lt-blue font-weight-bold">Nintendo 64</a>
                                 </div>
                             </div>
                             <div class="dropdown-item dropdown-nested">
                                 <a href="#" class="blue font-weight-bold" data-toggle="dropdown-nested">Sega</a>
                                 <div class="dropdown-menu dropdown-menu-nested">
-                                    <a href="#" class="dropdown-item lt-blue font-weight-bold">Sega Genesis</a>
+                                    <a href="{% url 'products' %}?category=sega_genesis_console"
+                                        class="dropdown-item lt-blue font-weight-bold">Sega Genesis</a>
                                 </div>
                             </div>
                             <div class="dropdown-item dropdown-nested">
                                 <a href="#" class="blue font-weight-bold" data-toggle="dropdown-nested">Handheld</a>
                                 <div class="dropdown-menu dropdown-menu-nested">
-                                    <a href="#" class="dropdown-item lt-blue font-weight-bold">Game Boy Advanced</a>
-                                    <a href="#" class="dropdown-item lt-blue font-weight-bold">Playstation Portable</a>
+                                    <a href="{% url 'products' %}?category=gameboy_advanced_console"
+                                        class="dropdown-item lt-blue font-weight-bold">Game Boy Advanced</a>
+                                    <a href="{% url 'products' %}?category=playstation_portable_console"
+                                        class="dropdown-item lt-blue font-weight-bold">Playstation Portable</a>
                                 </div>
                             </div>
                             <div class="dropdown-item dropdown-nested">
                                 <a href="#" class="blue font-weight-bold" data-toggle="dropdown-nested">Emulation</a>
                                 <div class="dropdown-menu dropdown-menu-nested">
-                                    <a href="#" class="dropdown-item lt-blue font-weight-bold">Raspberry Pi 4</a>
+                                    <a href="{% url 'products' %}?category=raspberry_pi_console"
+                                        class="dropdown-item lt-blue font-weight-bold">Raspberry Pi 4</a>
                                 </div>
                             </div>
+                            <a href="{% url 'products' %}?category=playstation_one_console,playstation_two_console,nintendo_snes_console,nintendo_64_console,sega_genesis_console,gameboy_advanced_console,playstation_portable_console,raspberry_pi_console"
+                                class="dropdown-item blue font-weight-bold">All Consoles</a>
                         </div>
                     </li>
 
@@ -139,27 +149,39 @@
                             <span class="blue text-underline">Games</span>
                         </a>
                         <div class="dropdown-menu border-0" aria-labelledby="games-link">
-                            <a href="" class="dropdown-item lt-blue font-weight-bold">Playstation One</a>
-                            <a href="#" class="dropdown-item lt-blue font-weight-bold">Playstation Two</a>
-                            <a href="#" class="dropdown-item lt-blue font-weight-bold">Playstation Portable</a>
-                            <a href="" class="dropdown-item lt-blue font-weight-bold">Super Nintendo</a>
-                            <a href="" class="dropdown-item lt-blue font-weight-bold">Nintendo 64</a>
-                            <a href="" class="dropdown-item lt-blue font-weight-bold">Sega Genesis</a>
-                            <a href="" class="dropdown-item lt-blue font-weight-bold">Raspberry Pi 4</a>
-                            <a href="" class="dropdown-item lt-blue font-weight-bold">Game Boy Advanced</a>
+                            <a href="{% url 'products' %}?category=playstation_one_games"
+                                class="dropdown-item lt-blue font-weight-bold">Playstation One</a>
+                            <a href="{% url 'products' %}?category=playstation_two_games"
+                                class="dropdown-item lt-blue font-weight-bold">Playstation Two</a>
+                            <a href="{% url 'products' %}?category=playstation_portable_games"
+                                class="dropdown-item lt-blue font-weight-bold">Playstation Portable</a>
+                            <a href="{% url 'products' %}?category=nintendo_snes_games"
+                                class="dropdown-item lt-blue font-weight-bold">Super Nintendo</a>
+                            <a href="{% url 'products' %}?category=nintendo_64_games"
+                                class="dropdown-item lt-blue font-weight-bold">Nintendo 64</a>
+                            <a href="{% url 'products' %}?category=sega_genesis_games"
+                                class="dropdown-item lt-blue font-weight-bold">Sega Genesis</a>
+                            <a href="{% url 'products' %}?category=gameboy_advanced_games"
+                                class="dropdown-item lt-blue font-weight-bold">Game Boy Advanced</a>
+                            <a href="{% url 'products' %}?category=playstation_one_games,playstation_two_games,nintendo_snes_games,nintendo_64_games,sega_genesis_games,gameboy_advanced_games,playstation_portable_games"
+                                class="dropdown-item blue font-weight-bold">All Games</a>
                         </div>
                     </li>
 
                     <li class="nav-item dropdown">
                         <a class="logo-font font-weight-bold nav-link text-black" href="#" id="specials-link"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="blue text-underline">Special Offers</span>
+                            <span class="blue text-underline">ACCESSORIES</span>
                         </a>
                         <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-                            <a href="" class="dropdown-item lt-blue font-weight-bold">New Arrivals</a>
-                            <a href="" class="dropdown-item lt-blue font-weight-bold">Deals</a>
-                            <a href="" class="dropdown-item lt-blue font-weight-bold">Clearance</a>
-                            <a href="" class="dropdown-item lt-blue font-weight-bold">All Specials</a>
+                            <a href="{% url 'products' %}?category=controller"
+                                class="dropdown-item lt-blue font-weight-bold">Controllers</a>
+                            <a href="{% url 'products' %}?category=memory_card"
+                                class="dropdown-item lt-blue font-weight-bold">Memory Cards</a>
+                            <a href="{% url 'products' %}?category=cables_apapters"
+                                class="dropdown-item lt-blue font-weight-bold">Cables &amp; Adapters</a>
+                            <a href="{% url 'products' %}?category=controller,memory_card,cables_adapters"
+                                class="dropdown-item lt-blue font-weight-bold">All Accessories</a>
                         </div>
                     </li>
                 </ul>
