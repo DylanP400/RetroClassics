@@ -14,7 +14,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col text-center">
-            <h2 class="text-white mb-2 robo-font">Products</h2>
+            <h2 class="text-white mb-2 robo-font mt-5 mt-md-0">Products</h2>
             {% for c in current_categories %}
             <a class="category-badge text-decoration-none" href="{% url 'products' %}?category={{ c.name }}">
                 <span class="p-2 mt-2 badge badge-white rounded-0 border border-white">{{ c.display_name }}</span>
@@ -24,112 +24,110 @@
         </div>
     </div>
 </div>
-<div class="row mb-2">
-    <div class="product-container col-10 offset-1">
-        <div class="row mt-1 mb-2">
-            <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
-                <div class="sort-select-wrapper w-50">
-                    <select id="sort-selector"
-                        class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
-                        <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...
-                        </option>
-                        <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low
-                            to high)</option>
-                        <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price
-                            (high to low)</option>
-                        <option value="rating_asc" {% if current_sorting == 'rating_asc' %}selected{% endif %}>Rating
-                            (low to high)</option>
-                        <option value="rating_desc" {% if current_sorting == 'rating_desc' %}selected{% endif %}>Rating
-                            (high to low)</option>
-                        <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)
-                        </option>
-                        <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)
-                        </option>
-                        <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>
-                            Category (A-Z)</option>
-                        <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>
-                            Category (Z-A)</option>
-                        <option value="release_date_asc"
-                            {% if current_sorting == 'release_date_asc' %}selected{% endif %}>
-                            Release Date (Newest)</option>
-                        <option value="release_date_desc"
-                            {% if current_sorting == 'release_date_desc' %}selected{% endif %}>
-                            Release Date (Oldest)</option>
-                        <option value="players_asc" {% if current_sorting == 'players_asc' %}selected{% endif %}>
-                            Players (low to high)</option>
-                        <option value="players_desc" {% if current_sorting == 'players_desc' %}selected{% endif %}>
-                            Players (high to low)</option>
-                    </select>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 order-md-first text-white">
-                <p class="text-white mt-3 text-center text-md-left">
-                    {% if search_term or current_categories or current_sorting != 'None_None' %}
-                    <span class="text-white"><a href="{% url 'products' %}" class="text-white text-underline">Products
-                            Home</a> |
-                    </span>
-                    {% endif %}
-                    {{ products|length }} Products{% if search_term %} found for
-                    <strong>"{{ search_term }}"</strong>{% endif %}
-                </p>
+<div class="col-10 offset-1">
+    <div class="row mt-1 mb-2 px-md-5">
+        <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end mb-1">
+            <div class="sort-select-wrapper w-50 pr-md-5">
+                <select id="sort-selector"
+                    class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                    <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...
+                    </option>
+                    <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low
+                        to high)</option>
+                    <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price
+                        (high to low)</option>
+                    <option value="rating_asc" {% if current_sorting == 'rating_asc' %}selected{% endif %}>Rating
+                        (low to high)</option>
+                    <option value="rating_desc" {% if current_sorting == 'rating_desc' %}selected{% endif %}>Rating
+                        (high to low)</option>
+                    <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)
+                    </option>
+                    <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)
+                    </option>
+                    <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>
+                        Category (A-Z)</option>
+                    <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>
+                        Category (Z-A)</option>
+                    <option value="release_date_asc" {% if current_sorting == 'release_date_asc' %}selected{% endif %}>
+                        Release Date (Newest)</option>
+                    <option value="release_date_desc"
+                        {% if current_sorting == 'release_date_desc' %}selected{% endif %}>
+                        Release Date (Oldest)</option>
+                    <option value="players_asc" {% if current_sorting == 'players_asc' %}selected{% endif %}>
+                        Players (low to high)</option>
+                    <option value="players_desc" {% if current_sorting == 'players_desc' %}selected{% endif %}>
+                        Players (high to low)</option>
+                </select>
             </div>
         </div>
-        <div class="row">
-            <div class="product-container col-10 offset-1">
-                <div class="row">
-                    {% for product in products %}
-                    <div class="col-md-3">
-                        <div class="card h-100 product-card karma-font">
-                            {% if product.image %}
+        <div class="col-12 col-md-6 order-md-first text-white mb-2">
+            <p class="text-white mt-3 text-center text-md-left pl-md-3">
+                {% if search_term or current_categories or current_sorting != 'None_None' %}
+                <span class="text-white pl-md-5"><a href="{% url 'products' %}"
+                        class="text-white text-underline">Products
+                        Home</a> |
+                </span>
+                {% endif %}
+                {{ products|length }} Products{% if search_term %} found for
+                <strong>"{{ search_term }}"</strong>{% endif %}
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-10 offset-1">
+            <div class="row">
+                {% for product in products %}
+                <div class="col-md-3">
+                    <div class="card h-100 product-card karma-font">
+                        {% if product.image %}
+                        <a href="{% url 'product_detail' product.id %}">
+                            <img class="card-img-top" src="{{ product.image.url }}" alt="{{ product.name }}">
+                        </a>
+                        {% else %}
+                        <a href="{% url 'product_detail' product.id %}">
+                            <img class="card-img-top" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                        </a>
+                        {% endif %}
+                        <div class="card-body">
                             <a href="{% url 'product_detail' product.id %}">
-                                <img class="card-img-top" src="{{ product.image.url }}" alt="{{ product.name }}">
+                                <h5 class="card-title text-center m-0 text-black">{{ product.name }}</h5>
                             </a>
+                        </div>
+                        <div class="card-footer blue product-card">
+                            <hr class="text-white text-center mt-0 mb-2">
+                            <p class="card-text text-center"> <span class="font-weight-bold">Price:</span>
+                                £{{ product.price }}</p>
+                            <p class="card-text text-center">
+                                <span class="font-weight-bold m-0">Rating:</span> <i
+                                    class="fa-sharp fa-solid fa-star fa-2xs"></i>
+                                {{ product.rating }} / 5</p>
+                            {% if product.release_date %}
+                            <p class="card-text text-center m-0"> <span class="font-weight-bold">Release
+                                    Date:</span> {{ product.release_date }}</p>
                             {% else %}
-                            <a href="{% url 'product_detail' product.id %}">
-                                <img class="card-img-top" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
-                            </a>
+                            <p class="card-text text-center m-0"> <span class="font-weight-bold">Release
+                                    Date:</span> 01/01/2000</p>
                             {% endif %}
-                            <div class="card-body">
-                                <a href="{% url 'product_detail' product.id %}">
-                                    <h5 class="card-title text-center m-0 text-black">{{ product.name }}</h5>
+                            <hr class="text-white text-center m-2">
+                            {% if product.category %}
+                            <p class="card-text text-center mt-2 mb-0 text-underline">
+                                <a class="text-white" href="{% url 'products' %}?category={{ product.category.name }}">
+                                    {{ product.category.display_name }}
                                 </a>
-                            </div>
-                            <div class="card-footer blue product-card">
-                                <hr class="text-white text-center mt-0 mb-2">
-                                <p class="card-text text-center"> <span class="font-weight-bold">Price:</span>
-                                    £{{ product.price }}</p>
-                                <p class="card-text text-center">
-                                    <span class="font-weight-bold m-0">Rating:</span> <i
-                                        class="fa-sharp fa-solid fa-star fa-2xs"></i>
-                                    {{ product.rating }} / 5</p>
-                                {% if product.release_date %}
-                                <p class="card-text text-center m-0"> <span class="font-weight-bold">Release
-                                        Date:</span> {{ product.release_date }}</p>
-                                {% else %}
-                                <p class="card-text text-center m-0"> <span class="font-weight-bold">Release
-                                        Date:</span> 01/01/2000</p>
-                                {% endif %}
-                                <hr class="text-white text-center m-2">
-                                {% if product.category %}
-                                <p class="card-text text-center mt-2 mb-0 text-underline">
-                                    <a class="text-white"
-                                        href="{% url 'products' %}?category={{ product.category.name }}">
-                                        {{ product.category.display_name }}
-                                    </a>
-                                </p>
-                                {% endif %}
-                            </div>
+                            </p>
+                            {% endif %}
                         </div>
                     </div>
-                    {% if forloop.counter|divisibleby:4 and not forloop.last %}
-                    <div class="col-12">
-                        <hr class="m-4">
-                    </div>
-                    {% endif %}
-                    {% endfor %}
                 </div>
+                {% if forloop.counter|divisibleby:4 and not forloop.last %}
+                <div class="col-12">
+                    <hr class="m-4">
+                </div>
+                {% endif %}
+                {% endfor %}
             </div>
         </div>
+    </div>
 
 
-        {% endblock %}
+    {% endblock %}

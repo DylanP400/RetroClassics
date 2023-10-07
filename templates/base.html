@@ -53,7 +53,7 @@
     {% include 'includes/mobile-top-header.html' %}
     {% include 'includes/main-nav.html' %}
 
-
+    <a class="back-to-top" href="#" aria-label="Back to top button"><i class="fa-sharp fa-solid fa-circle-up"></i></a>
 
     {% if messages %}
     <div class="message-container"></div>
@@ -64,11 +64,11 @@
     {% endblock %}
 
     {% block content %}
-
     {% endblock %}
 
     {% block postload_js %}
     {% endblock %}
+
 
 </body>
 

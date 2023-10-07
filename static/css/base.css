@@ -43,6 +43,7 @@ p {
     font-family: 'Karma', serif;
 }
 
+
 /* ------------------------------------------- End */
 
 /* ------------------------------------------------------------------------------------- End */
@@ -197,6 +198,32 @@ header {
 
 
 /* ------------------------------------------------------------------------------ End */
+
+/* ---------------------------------------------------------------- Back to top button */
+
+.back-to-top {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background: #054a91;
+    color: #3e7cb1;
+    bottom: 30px;
+    right: 30px;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    font-size: 32px;
+    border-radius: 25px;
+    z-index: 2;
+}
+
+.back-to-top:hover {
+    background-color: white;
+    color: #054a91;
+    font-size: 35px;
+}
+
+/* --------------------------------------------- End */
 
 /* ----------------------------------------------- from Bulma */
 .icon {
