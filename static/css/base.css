@@ -187,6 +187,15 @@ header {
     font-size: 25px;
 }
 
+.category-badge {
+    background-color: #3e7cb1 !important;
+    color: white !important;
+    font-size: 19px;
+    font-family: 'Roboto Slab', serif;
+    margin-right: 3px;
+}
+
+
 /* ------------------------------------------------------------------------------ End */
 
 /* ----------------------------------------------- from Bulma */

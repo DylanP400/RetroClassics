@@ -83,9 +83,14 @@
                             <span class="blue text-underline">All Products</span>
                         </a>
                         <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                            <a href="" class="dropdown-item lt-blue font-weight-bold">By Price</a>
-                            <a href="" class="dropdown-item lt-blue font-weight-bold">By Rating</a>
-                            <a href="" class="dropdown-item lt-blue font-weight-bold">By Category</a>
+                            <a href="{% url 'products' %}?sort=price&direction=asc"
+                                class="dropdown-item lt-blue font-weight-bold">By Price</a>
+                            <a href="{% url 'products' %}?sort=rating&direction=desc"
+                                class="dropdown-item lt-blue font-weight-bold">By Rating</a>
+                            <a href="{% url 'products' %}?sort=release_date&direction=asc"
+                                class="dropdown-item lt-blue font-weight-bold">By Release Date</a>
+                            <a href="{% url 'products' %}?sort=players&direction=asc"
+                                class="dropdown-item lt-blue font-weight-bold">By Players</a>
                             <a href="{% url 'products' %}" class="dropdown-item lt-blue font-weight-bold">All
                                 Products</a>
                         </div>
