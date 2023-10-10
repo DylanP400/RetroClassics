@@ -59,14 +59,15 @@
     <div class="message-container"></div>
     {% endif %}
 
-    {% block page_header %}
-
+    {% block pageheader %}
+    {% include 'includes/mobile-top-header.html' %}
+    {% include 'includes/main-nav.html' %}
     {% endblock %}
 
     {% block content %}
     {% endblock %}
 
-    {% block postload_js %}
+    {% block postloadjs %}
     {% endblock %}
 
 

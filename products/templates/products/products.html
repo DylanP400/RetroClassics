@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block page_header %}
+{% block pageheader %}
 <div class="container header-container">
     <div class="row">
         <div class="col"></div>
@@ -48,11 +48,6 @@
                         Category (A-Z)</option>
                     <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>
                         Category (Z-A)</option>
-                    <option value="release_date_asc" {% if current_sorting == 'release_date_asc' %}selected{% endif %}>
-                        Release Date (Newest)</option>
-                    <option value="release_date_desc"
-                        {% if current_sorting == 'release_date_desc' %}selected{% endif %}>
-                        Release Date (Oldest)</option>
                     <option value="players_asc" {% if current_sorting == 'players_asc' %}selected{% endif %}>
                         Players (low to high)</option>
                     <option value="players_desc" {% if current_sorting == 'players_desc' %}selected{% endif %}>
@@ -128,6 +123,31 @@
             </div>
         </div>
     </div>
+    {% endblock %}
 
+    {% block postloadjs %}
+    <!--This script is from Boutique Ado-->
+    {{ block.super }}
+    <script type="text/javascript">
+        $('#sort-selector').change(function () {
+            var selector = $(this);
+            var currentUrl = new URL(window.location);
 
+            var selectedVal = selector.val();
+            if (selectedVal != "reset") {
+                var sort = selectedVal.split("_")[0];
+                var direction = selectedVal.split("_")[1];
+
+                currentUrl.searchParams.set("sort", sort);
+                currentUrl.searchParams.set("direction", direction);
+
+                window.location.replace(currentUrl);
+            } else {
+                currentUrl.searchParams.delete("sort");
+                currentUrl.searchParams.delete("direction");
+
+                window.location.replace(currentUrl);
+            }
+        })
+    </script>
     {% endblock %}
