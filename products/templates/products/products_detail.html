@@ -10,10 +10,9 @@
 {% endblock %}
 
 {% block content %}
-<div class="overlay"></div>
 <div class="container-fluid mb-4 mt-1">
     <div class="row product-detail">
-        <div class="col-md-4 col-sm-12">
+        <div class="col-md-6 col-sm-12">
             <div class="row">
                 <div class="col-md-12">
                     <div class="card h-100 product-card karma-font">
@@ -60,21 +59,22 @@
                                 <div class="col-md-6 col-12">
                                     <!--For Console products-->
                                     {% if product.console.colour %}
-                                    <p class="card-text text-left"> <span class="font-weight-bold">Colour:</span>
+                                    <p class="card-text text-md-right"> <span class="font-weight-bold">Colour:</span>
                                         {{ product.console.colour }}</p>
                                     {% else %}
                                     <p class="card-text d-none d-md-none"> <span class="font-weight-bold">None</span>
                                     </p>
                                     {% endif %}
                                     {% if product.console.manufacturer %}
-                                    <p class="card-text text-left"> <span class="font-weight-bold">Manufacturer:</span>
+                                    <p class="card-text text-md-right"> <span
+                                            class="font-weight-bold">Manufacturer:</span>
                                         {{ product.console.manufacturer }}</p>
                                     {% else %}
                                     <p class="card-text d-none d-md-none"> <span class="font-weight-bold">None</span>
                                     </p>
                                     {% endif %}
                                     {% if product.console.storage %}
-                                    <p class="card-text text-left"> <span class="font-weight-bold">Storage:</span>
+                                    <p class="card-text text-md-right"> <span class="font-weight-bold">Storage:</span>
                                         {{ product.console.storage }}</p>
                                     {% else %}
                                     <p class="card-text d-none d-md-none"> <span class="font-weight-bold">None</span>
@@ -82,33 +82,63 @@
                                     {% endif %}
                                     <!--For Game products-->
                                     {% if product.game.pgi_certificate %}
-                                    <p class="card-text text-left"> <span class="font-weight-bold">Age:</span>
+                                    <p class="card-text text-right"> <span class="font-weight-bold">Age:</span>
                                         {{ product.game.pgi_certificate }}</p>
                                     {% else %}
-                                    <p class="card-text text-left d-none d-md-none">None</p>
+                                    <p class="card-text text-right d-none d-md-none">None</p>
                                     {% endif %}
                                     {% if product.game.developer %}
-                                    <p class="card-text text-left"> <span class="font-weight-bold">Developer:</span>
+                                    <p class="card-text text-right"> <span class="font-weight-bold">Developer:</span>
                                         {{ product.game.developer }}</p>
                                     {% else %}
-                                    <p class="card-text text-left d-none d-md-none">None</p>
+                                    <p class="card-text text-right d-none d-md-none">None</p>
                                     {% endif %}
                                     {% if product.game.publisher %}
-                                    <p class="card-text text-left"> <span class="font-weight-bold">Publisher:</span>
+                                    <p class="card-text text-right"> <span class="font-weight-bold">Publisher:</span>
                                         {{ product.game.publisher }}</p>
                                     {% else %}
-                                    <p class="card-text text-left d-none d-md-none">None</p>
+                                    <p class="card-text text-right text-md-left d-none d-md-none">None</p>
                                     {% endif %}
                                 </div>
                             </div>
+
+
                             <hr class="text-white text-center m-1">
-                            <div class="row">
-                                <div class="col-12">
+                            <form action="{% url 'add_to_bag' product.id %}" method="POST">
+                                {% csrf_token %}
+                                <div class="row">
+                                    <div class="col-12 mt-3 d-flex flex-row justify-content-center">
+                                        <div class="form-group">
+                                            <input type="number" name="quantity" value="1" min="1" max="5"
+                                                data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
+                                            <input type="submit" class="mt-2 ml-1 buy-btn" value="Add To Basket">
+                                        </div>
+                                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                                    </div>
+                                </div>
+                            </form>
+                            <hr class="text-white text-center mb-3">
+                            <div class="row m-0">
+
+                                <div class="col-6">
+                                    <a href="{% url 'products' %}"
+                                        class="btn btn-outline-light text-white rounded-0 mt-3">
+                                        <span class="icon">
+                                            <i class="fas fa-chevron-left"></i>
+                                        </span>
+                                        <span class="text-uppercase">More Products</span>
+                                    </a>
+                                </div>
+                                <div class="col-6">
                                     {% if product.category %}
-                                    <p class="card-text text-center mt-2 mb-0 text-underline">
+                                    <p class="card-text text-center mt-3 mb-3 text-underline">
                                         <a class="text-white"
-                                            href="{% url 'products' %}?category={{ product.category.name }}">
-                                            {{ product.category.display_name }}
+                                            href="{% url 'products' %}?category={{ product.category.name }}"> <span
+                                                class="icon">
+                                                <i class="fas fa-chevron-right"></i>
+                                            </span> Check out
+                                            some more
+                                            {{ product.category.display_name }} products
                                         </a>
                                     </p>
                                     {% endif %}
