@@ -36,10 +36,22 @@ class Product(models.Model):
         return self.name
 
 
+class Console(Product):
+    colour = models.CharField(max_length=100, null=True)
+    manufacturer = models.CharField(max_length=254, null=True,)
+    storage = models.CharField(max_length=254, null=True,)
+
+
 class Game(Product):
     developer = models.CharField(max_length=254, null=True,)
     publisher = models.CharField(max_length=254, null=True,)
     pgi_certificate = models.CharField(max_length=254, null=True, blank=True)
+    associated_console = models.ForeignKey(
+        Console,
+        null=True,
+        blank=True,
+        on_delete=models.SET_NULL,
+    )
     CONSOLE_CHOICES = (
         ('Playstation_one', 'Playstation One'),
         ('Playstation_two', 'Playstation Two'),
@@ -69,9 +81,3 @@ class Game(Product):
         ('Racing', 'Racing'),
     )
     genre = models.CharField(max_length=50, choices=GENRE_CHOICES, null=True,)
-
-
-class Console(Product):
-    colour = models.CharField(max_length=100, null=True)
-    manufacturer = models.CharField(max_length=254, null=True,)
-    storage = models.CharField(max_length=254, null=True,)
