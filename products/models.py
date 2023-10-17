@@ -46,12 +46,6 @@ class Game(Product):
     developer = models.CharField(max_length=254, null=True,)
     publisher = models.CharField(max_length=254, null=True,)
     pgi_certificate = models.CharField(max_length=254, null=True, blank=True)
-    associated_console = models.ForeignKey(
-        Console,
-        null=True,
-        blank=True,
-        on_delete=models.SET_NULL,
-    )
     CONSOLE_CHOICES = (
         ('Playstation_one', 'Playstation One'),
         ('Playstation_two', 'Playstation Two'),
