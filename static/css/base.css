@@ -200,12 +200,24 @@ header {
     background-color: #3e7cb1;
     color: white;
     border: 2px solid white;
-    padding: 5px 15px 5px 15px;
+
 }
 
 .btn-outline-light:hover {
     color: white;
     background-color: #3e7cb1;
+}
+
+.decrement-qty {
+    background-color: red;
+    color: white;
+    border: 2px solid red;
+}
+
+.increment-qty {
+    background-color: green;
+    color: white;
+    border: 2px solid green;
 }
 
 /* ------------------------------------------------------------------------------ End */
