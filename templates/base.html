@@ -65,9 +65,25 @@
     <a class="back-to-top" href="#" aria-label="Back to top button"><i class="fa-sharp fa-solid fa-circle-up"></i></a>
 
     {% if messages %}
-    <div class="message-container"></div>
+    <div class="message-container">
+        {% for message in messages %}
+        {% with message.level as level %}
+        {% if level == 40 %}
+        <!-- 40 = error -->
+        {% include 'includes/toasts/toast_error.html' %}
+        {% elif level == 30 %}
+        <!--30 = warning -->
+        {% include 'includes/toasts/toast_warning.html' %}
+        {% elif level == 25 %}
+        <!--25 = success-->
+        {% include 'includes/toasts/toast_success.html' %}
+        {% else %}
+        {% include 'includes/toasts/toast_info.html' %}
+        {% endif %}
+        {% endwith %}
+        {% endfor %}
+    </div>
     {% endif %}
-
     {% block pageheader %}
     {% include 'includes/mobile-top-header.html' %}
     {% include 'includes/main-nav.html' %}
@@ -77,6 +93,9 @@
     {% endblock %}
 
     {% block postloadjs %}
+    <script>
+        $('.toast').toast('show');
+    </script>
     {% endblock %}
 
 
