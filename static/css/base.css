@@ -35,8 +35,16 @@ p {
     color: #054a91;
 }
 
+.bg-blue {
+    background-color: #054a91;
+}
+
 .lt-blue {
     color: #3e7cb1;
+}
+
+.bg-lt-blu {
+    background-color: #3e7cb1;
 }
 
 .border-black {
@@ -45,6 +53,22 @@ p {
 
 .text-black {
     color: black;
+}
+
+.green {
+    color: green;
+}
+
+.yellow-border {
+    border: 1px solid yellow;
+}
+
+.bg-yellow {
+    background-color: yellow;
+}
+
+.text-yellow {
+    color: yellow;
 }
 
 /* ------------------------------------- End */
@@ -102,7 +126,7 @@ p {
 }
 
 .sm-icons {
-    font-size: 10px;
+    font-size: 9px;
 }
 
 .nav-font {
@@ -242,6 +266,17 @@ header {
 
 
 /* ------------------------------------------------------------------------------ End */
+
+/* ------------------------------------------------------------- Shopping cart/bag  */
+
+.basket-notification-wrapper {
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+
+/* -------------------------------------------------------------- End */
 
 /* ---------------------------------------------------------------- Back to top button */
 
