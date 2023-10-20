@@ -1,4 +1,5 @@
 {% load static %}
+{% get_media_prefix as MEDIA_URL %}
 
 <!doctype html>
 <html lang="en">
@@ -33,8 +34,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Karma&family=Roboto+Slab&display=swap" rel="stylesheet">
     <!--Favicon-->
-    <link rel="shortcut icon" href="media/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ MEDIA_URL }}favicon.ico" type="image/x-icon">
+    <link rel="icon" href="{{ MEDIA_URL }}favicon.ico" type="image/x-icon">
     {% endblock %}
 
     {% block extra_css %}
