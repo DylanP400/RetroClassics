@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block pageheader %}
-<div class="container header-container mb-2">
+<div class="container header-container mb-0 mb-md-4 mb-lg-0">
     <div class="row">
         <div class="col"></div>
     </div>
@@ -11,14 +11,14 @@
 
 {% block content %}
 <div class="overlay"></div>
-<div class="container-fluid mb-3 p-3">
+<div class="container-fluid mb-3 p-3 mt-4 m-md-0">
     <div class="row">
         <div class="col">
-            <h2 class="logo-font mb-3 text-white karma">Shopping Bag</h2>
+            <h2 class="logo-font mb-3 text-white karma text-md-left text-center">Shopping Basket</h2>
         </div>
     </div>
     <div class="row">
-        <aside class="col-lg-9">
+        <aside class="col-lg-9 col-12">
             {% if bag_items %}
             <div class="card">
                 <div class="table-responsive">
@@ -28,18 +28,19 @@
                                 <th scope="col">Products</th>
                                 <th scope="col"></th>
                                 <th scope="col">Quantity</th>
-                                <th scope="col">Price</th>
+                                <th scope="col" class="d-none d-md-block">Price</th>
                             </tr>
                         </thead>
                         <tbody>
                             {% for item in bag_items %}
                             <tr>
-                                <td class="py-3">
+                                <td class="py-3 sm">
                                     <p class="my-0"><strong>{{ item.product.name }}</strong></p>
                                     <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
+                                    <p class="my-0 d-block d-sm-none ">£{{ item.product.price }}</p>
                                 </td>
-                                <td class="p-3 w-25">
-                                    <img class="img-fluid rounded" src="{{ item.product.image.url }}"
+                                <td class="p-md-3 w-md-25">
+                                    <img class="img-custom rounded" src="{{ item.product.image.url }}"
                                         alt="{{ product.name }}">
                                 </td>
                                 <td class="py-3 w-25">
@@ -69,17 +70,15 @@
                                                         </span>
                                                     </button>
                                                 </div>
-                                                {% if item.product.has_sizes %}
-                                                <input type="hidden" name="product_size" value="{{ item.size }}">
-                                                {% endif %}
                                             </div>
                                         </div>
                                     </form>
-                                    <a class="update-link text-info"><small>Update</small></a>
-                                    <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}"
+                                    <a class="update-link text-info float-sm-left text-center"><small>Update</small></a>
+                                    <a class="remove-item text-danger float-sm-right text-center"
+                                        id="remove_{{ item.item_id }}"
                                         data-product_size="{{ item.size }}"><small>Remove</small></a>
                                 </td>
-                                <td class="py-3">
+                                <td class="py-3 sm d-none d-md-block">
                                     <p class="my-0">£{{ item.product.price }}</p>
                                 </td>
                             </tr>
@@ -89,7 +88,7 @@
                 </div>
             </div>
         </aside>
-        <aside class="col-lg-3">
+        <aside class="col-lg-3 col-12">
             <div class="card mb-3">
                 <div class="card-body">
                     <form>
@@ -116,7 +115,7 @@
                         more!
                     </p>
                     {% endif %}
-                    <p><strong>Grand Total:</strong> ${{ grand_total|floatformat:2 }}</p>
+                    <p><strong>Grand Total:</strong> £{{ grand_total|floatformat:2 }}</p>
                     {% endif %}
                     <hr>
                     <a href="{% url 'products' %}" class="btn btn-out btn-primary btn-square btn-main">
