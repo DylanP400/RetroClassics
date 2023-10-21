@@ -147,7 +147,7 @@
                             <div class="row m-0">
                                 <div class="col-6">
                                     <a href="{% url 'products' %}"
-                                        class="btn btn-outline-light text-white rounded-0 mt-4">
+                                        class="btn btn-outline-light lt-blue rounded-0 mt-4 bg-yellow">
                                         <span class="icon">
                                             <i class="fas fa-chevron-left"></i>
                                         </span>
@@ -156,8 +156,8 @@
                                 </div>
                                 <div class="col-6">
                                     {% if product.category %}
-                                    <p class="card-text text-center mt-3 mb-3 text-underline">
-                                        <a class="text-white"
+                                    <p class="card-text text-center mt-3 mb-3">
+                                        <a class="text-yellow"
                                             href="{% url 'products' %}?category={{ product.category.name }}">
                                             <span class="icon">
                                                 <i class="fas fa-chevron-right"></i>
