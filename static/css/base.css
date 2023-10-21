@@ -280,9 +280,8 @@ header {
     max-width: 200px;
     height: auto;
     max-height: 200px;
-    min-width: 60px;
-    min-height: 60px;
-    /* Adjust this value as needed */
+    min-width: 40px;
+    min-height: 40px;
 }
 
 
@@ -467,4 +466,9 @@ header {
     .sm {
         font-size: 12px;
     }
+
+    .img-custom {
+        max-width: 70px;
+    }
+
 }
