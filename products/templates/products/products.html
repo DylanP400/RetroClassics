@@ -58,8 +58,7 @@
         <div class="col-12 col-md-6 order-md-first text-white mb-2">
             <p class="text-white mt-3 text-center text-md-left pl-md-3">
                 {% if search_term or current_categories or current_sorting != 'None_None' %}
-                <span class="text-white pl-md-5"><a href="{% url 'products' %}"
-                        class="text-white text-underline">Products
+                <span class="pl-md-5"><a href="{% url 'products' %}" class="text-underline text-yellow">Products
                         Home</a> |
                 </span>
                 {% endif %}
@@ -106,7 +105,7 @@
                             <hr class="text-white text-center m-2">
                             {% if product.category %}
                             <p class="card-text text-center mt-2 mb-0 text-underline">
-                                <a class="text-white" href="{% url 'products' %}?category={{ product.category.name }}">
+                                <a class="text-yellow" href="{% url 'products' %}?category={{ product.category.name }}">
                                     {{ product.category.display_name }}
                                 </a>
                             </p>
