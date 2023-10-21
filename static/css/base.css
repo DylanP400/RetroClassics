@@ -29,15 +29,6 @@ p {
     height: 2px;
 }
 
-.img-custom {
-    max-width: 100%;
-    height: auto;
-    max-height: 300px;
-    min-width: 60px;
-    min-height: 60px;
-    /* Adjust this value as needed */
-}
-
 
 /* ------------------------------ Custom colours */
 
@@ -283,6 +274,15 @@ header {
     height: 100px;
     overflow-x: hidden;
     overflow-y: auto;
+}
+
+.img-custom {
+    max-width: 200px;
+    height: auto;
+    max-height: 200px;
+    min-width: 60px;
+    min-height: 60px;
+    /* Adjust this value as needed */
 }
 
 
