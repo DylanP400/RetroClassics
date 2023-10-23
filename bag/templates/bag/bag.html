@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
-
+{% load bag_tools %}
 {% block pageheader %}
 <div class="container header-container mb-0 mb-md-4 mb-lg-0">
     <div class="row">
@@ -20,11 +20,11 @@
     <div class="row">
         <aside class="col-lg-9 col-12">
             {% if bag_items %}
-            <div class="card">
-                <div class="table-responsive">
+            <div class="card bg-lt-blu">
+                <div class="table-responsive yellow-border">
                     <table class="table table-borderless">
                         <thead>
-                            <tr class="small text-uppercase">
+                            <tr class="small text-uppercase text-white">
                                 <th scope="col">Products</th>
                                 <th scope="col"></th>
                                 <th scope="col">Quantity</th>
@@ -35,9 +35,9 @@
                             {% for item in bag_items %}
                             <tr>
                                 <td class="py-3 sm">
-                                    <p class="my-0"><strong>{{ item.product.name }}</strong></p>
-                                    <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
-                                    <p class="my-0 d-block d-sm-none ">£{{ item.product.price }}</p>
+                                    <p class="my-0 text-white"><strong>{{ item.product.name }}</strong></p>
+                                    <p class="my-0 small text-yellow">SKU: {{ item.product.sku|upper }}</p>
+                                    <p class="my-0 d-block d-sm-none text-yellow">£{{ item.product.price }}</p>
                                 </td>
                                 <td class="p-md-3 w-md-25">
                                     <img class="img-custom rounded" src="{{ item.product.image.url }}"
@@ -73,13 +73,13 @@
                                             </div>
                                         </div>
                                     </form>
-                                    <a class="update-link text-info float-sm-left text-center"><small>Update</small></a>
-                                    <a class="remove-item text-danger float-sm-right text-center"
+                                    <a class="update-link green float-sm-left text-center"><small>Update</small></a>
+                                    <a class="remove-item text-red float-sm-right text-center"
                                         id="remove_{{ item.item_id }}"
                                         data-product_size="{{ item.size }}"><small>Remove</small></a>
                                 </td>
                                 <td class="py-3 sm d-none d-md-block">
-                                    <p class="my-0">£{{ item.product.price }}</p>
+                                    <p class="my-0 text-yellow">£{{ item.product.price }}</p>
                                 </td>
                             </tr>
                             {% endfor %}
@@ -90,38 +90,43 @@
         </aside>
         <aside class="col-lg-3 col-12">
             <div class="card mb-3">
-                <div class="card-body">
+                <div class="card-body bg-lt-blu yellow-border">
                     <form>
                         <div>
-                            <label>Have coupon?</label>
+                            <label class="text-white">Have coupon?</label>
                             <div class="input-group">
                                 <input type="text" placeholder="Discount code">
                                 <span class="input-group-append">
-                                    <button type="submit" class="btn btn-primary btn-apply">Apply</button>
+                                    <button type="submit" class="btn btn-primary bg-blue">Apply</button>
                                 </span>
-                                <small class="mt-2">Our newsletter gives out free discount codes every
+                                <small class="mt-2 text-yellow">Our newsletter gives out free discount codes every
                                     month!</small></div>
                         </div>
                     </form>
                 </div>
             </div>
             <div class="card">
-                <div class="card-body">
-                    <p><strong>Total price:</strong> £{{ total|floatformat:2 }}</p>
-                    <p><strong>Delivery:</strong> £{{ delivery|floatformat:2 }}</p>
+                <div class="card-body bg-lt-blu yellow-border">
+                    <p class="text-yellow"><strong class="text-white">Total price:</strong> £{{ total|floatformat:2 }}
+                    </p>
+                    <p class="text-yellow"><strong class="text-white">Delivery:</strong> £{{ delivery|floatformat:2 }}
+                    </p>
                     {% if free_delivery_delta > 0 %}
-                    <p class="text-danger">
-                        You could get free delivery by spending just <strong>£{{ free_delivery_delta }}</strong>
+                    <p class="text-white delivery-banner">
+                        You could get free delivery by spending just <strong
+                            class="text-yellow">£{{ free_delivery_delta }}</strong>
                         more!
                     </p>
                     {% endif %}
-                    <p><strong>Grand Total:</strong> £{{ grand_total|floatformat:2 }}</p>
+                    <p class="text-yellow"><strong class="text-white">Grand Total:</strong>
+                        £{{ grand_total|floatformat:2 }}</p>
                     {% endif %}
                     <hr>
-                    <a href="{% url 'products' %}" class="btn btn-out btn-primary btn-square btn-main">
+                    <a href="{% url 'products' %}" class="btn btn-out bg-blue btn-square btn-main text-white">
                         <i class="fas fa-chevron-left"></i> Continue Shopping</a>
-                    <a href="#" class="btn btn-out btn-success btn-square btn-main">Checkout<span class="icon">
-                            <i class="fas fa-lock"></i>
+                    <a href="{% url 'checkout' %}" class="btn btn-out bg-yellow btn-square btn-main">Checkout<span
+                            class="icon">
+                            <i class="fas fa-lock blue"></i>
                         </span></a>
                 </div>
             </div>
