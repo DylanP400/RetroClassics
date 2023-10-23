@@ -27,8 +27,8 @@
 
     <div class="row">
         <div class="col-12 col-lg-6 order-lg-last karma-font">
-            <p class="text-yellow">Order Summary ({{ product_count }})</p>
-            <div class="row text-yellow">
+            <p class="text-white">Order Summary <span class="text-yellow">({{ product_count }})</span></p>
+            <div class="row text-white">
                 <div class="col-7 offset-2">
                     <p class="mb-1 mt-0">Item</p>
                 </div>
@@ -49,10 +49,10 @@
                 </div>
                 <div class="col-7">
                     <p class="my-0 text-white"><strong>{{ item.product.name }}</strong></p>
-                    <p class="my-0 small text-yellow">Qty: {{ item.quantity }}</p>
+                    <p class="my-0 small text-white">Qty: <span class="text-yellow">{{ item.quantity }}</span></p>
                 </div>
                 <div class="col-3 text-right">
-                    <p class="my-0 text-yellow">${{ item.product.price | calc_subtotal:item.quantity }}</p>
+                    <p class="my-0 text-yellow">£{{ item.product.price | calc_subtotal:item.quantity }}</p>
                 </div>
             </div>
             {% endfor %}
@@ -64,9 +64,9 @@
                     <p class="my-0">Grand Total:</p>
                 </div>
                 <div class="col-3 text-yellow">
-                    <p class="my-0 mt-2">${{ total | floatformat:2 }}</p>
-                    <p class="my-0">${{ delivery | floatformat:2 }}</p>
-                    <p class="my-0"><strong>${{ grand_total | floatformat:2 }}</strong></p>
+                    <p class="my-0 mt-2">£{{ total | floatformat:2 }}</p>
+                    <p class="my-0">£{{ delivery | floatformat:2 }}</p>
+                    <p class="my-0"><strong>£{{ grand_total | floatformat:2 }}</strong></p>
                 </div>
             </div>
         </div>
@@ -96,9 +96,9 @@
                         <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info"
                             checked>
                         {% else %}
-                        <label class="form-check-label" for="id-save-info">
-                            <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or
-                            <a class="text-info" href="{% url 'account_login' %}">login</a> to save this information
+                        <label class="form-check-label text-white" for="id-save-info">
+                            <a class="text-yellow" href="{% url 'account_signup' %}">Create an account</a> or
+                            <a class="text-yellow" href="{% url 'account_login' %}">login</a> to save this information
                         </label>
                         {% endif %}
                     </div>
@@ -115,14 +115,14 @@
                 <div class="submit-button text-right mt-5 mb-2">
                     <a href="{% url 'view_bag' %}" class="btn bg-blue rounded-0">
                         <span class="icon">
-                            <i class="fas fa-chevron-left"></i>
+                            <i class="fas fa-chevron-left text-yellow"></i>
                         </span>
                         <span class="font-weight-bold text-white robo-font">Adjust Bag</span>
                     </a>
                     <button id="submit-button" class="btn bg-blue rounded-0">
-                        <span class="font-weight-bold text-yellow robo-font">Complete Order</span>
+                        <span class="font-weight-bold text-white robo-font">Complete Order</span>
                         <span class="icon">
-                            <i class="fas fa-lock"></i>
+                            <i class="fas fa-lock text-yellow"></i>
                         </span>
                     </button>
                     <p class="small text-white my-2">
@@ -130,11 +130,18 @@
                             <i class="fas fa-exclamation-circle text-red"></i>
                         </span>
                         <span>Your card will be charged <strong
-                                class="text-yellow">${{ grand_total|floatformat:2 }}</strong></span>
+                                class="text-yellow">£{{ grand_total|floatformat:2 }}</strong></span>
                     </p>
                 </div>
             </form>
         </div>
     </div>
 </div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+{{ stripe_public_key|json_script:"id_stripe_public_key" }}
+{{ client_secret|json_script:"id_client_secret" }}
+<script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
 {% endblock %}
