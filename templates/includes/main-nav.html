@@ -83,6 +83,8 @@
                             <span class="blue text-underline">All Products</span>
                         </a>
                         <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
+                            <a href="{% url 'products' %}?on_sale=True"
+                                class="dropdown-item lt-blue font-weight-bold">Sale!</a>
                             <a href="{% url 'products' %}?sort=price&direction=asc"
                                 class="dropdown-item lt-blue font-weight-bold">By Price</a>
                             <a href="{% url 'products' %}?sort=rating&direction=desc"

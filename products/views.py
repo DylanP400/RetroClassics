@@ -53,6 +53,11 @@ def all_products(request):
                 description__icontains=query
                 )
             products = products.filter(queries)
+        
+        if 'on_sale' in request.GET:
+            on_sale_param = request.GET['on_sale']
+            if on_sale_param.lower() == 'true':
+                products = products.filter(on_sale=True)
 
     current_sorting = f'{sort}_{direction}'
 
