@@ -84,7 +84,7 @@
                         </a>
                         <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
                             <a href="{% url 'products' %}?on_sale=True"
-                                class="dropdown-item lt-blue font-weight-bold">Sale!</a>
+                                class="dropdown-item lt-blue font-weight-bold">On Sale!</a>
                             <a href="{% url 'products' %}?sort=price&direction=asc"
                                 class="dropdown-item lt-blue font-weight-bold">By Price</a>
                             <a href="{% url 'products' %}?sort=rating&direction=desc"
@@ -169,7 +169,7 @@
                             <a href="{% url 'products' %}?category=gameboy_advanced_games"
                                 class="dropdown-item lt-blue font-weight-bold">Game Boy Advanced</a>
                             <a href="{% url 'products' %}?category=playstation_one_games,playstation_two_games,nintendo_snes_games,nintendo_64_games,sega_genesis_games,gameboy_advanced_games,playstation_portable_games"
-                                class="dropdown-item blue font-weight-bold">All Games</a>
+                                class="dropdown-item lt-blue font-weight-bold">All Games</a>
                         </div>
                     </li>
 
