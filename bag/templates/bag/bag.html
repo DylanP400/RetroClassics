@@ -40,9 +40,14 @@
                                     <p class="my-0 d-block d-sm-none text-yellow">£{{ item.product.price }}</p>
                                 </td>
                                 <td class="p-md-3 w-md-25">
-                                    <img class="img-custom rounded" src="{{ item.product.image.url }}"
-                                        alt="{{ product.name }}">
+                                    {% if item.product.image %}
+                                    <img class="w-100 img-custom rounded" alt="{{ item.product.name }}"
+                                        src="{{ item.product.image.url }}">
+                                    {% else %}
+                                    <img class="w-100 img-custom rounded" alt="No image"
+                                        src="{{ MEDIA_URL }}noimage.png">
                                 </td>
+                                {% endif %}
                                 <td class="py-3 w-25">
                                     <form class="form update-form" method="POST"
                                         action="{% url 'update_bag' item.item_id %}">

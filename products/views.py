@@ -9,6 +9,7 @@ from .forms import ProductForm
 from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
+from django.contrib.auth.decorators import login_required
 
 
 def all_products(request):
@@ -73,7 +74,7 @@ def all_products(request):
 
 
 def product_detail(request, product_id):
-    """view to show all selected product"""
+    """view to show all selected products"""
 
     product = get_object_or_404(Product, pk=product_id)
 
@@ -84,9 +85,19 @@ def product_detail(request, product_id):
     return render(request, 'products/products_detail.html', context)
 
 
+@login_required
 def add_product(request):
-    """ Add a product to the store if you are a superuser """
-    form = ProductForm()
+    """ Add a product to the store """
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES)
+        if form.is_valid():
+            product = form.save()
+            messages.success(request, 'Successfully added product!')
+            return redirect(reverse('product_detail', args=[product.id]))
+        else:
+            messages.error(request, 'Failed to add product. Please ensure the form is valid.')
+    else:
+        form = ProductForm()
     template = 'products/add_product.html'
     context = {
         'form': form,
