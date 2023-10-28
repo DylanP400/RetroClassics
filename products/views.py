@@ -5,6 +5,7 @@ from django.shortcuts import (
     reverse,
 )
 from .models import Product, Category
+from .forms import ProductForm
 from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
@@ -53,7 +54,7 @@ def all_products(request):
                 description__icontains=query
                 )
             products = products.filter(queries)
-        
+
         if 'on_sale' in request.GET:
             on_sale_param = request.GET['on_sale']
             if on_sale_param.lower() == 'true':
@@ -81,3 +82,14 @@ def product_detail(request, product_id):
     }
 
     return render(request, 'products/products_detail.html', context)
+
+
+def add_product(request):
+    """ Add a product to the store if you are a superuser """
+    form = ProductForm()
+    template = 'products/add_product.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
