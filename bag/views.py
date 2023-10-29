@@ -67,7 +67,7 @@ def remove_from_bag(request, item_id):
             request.session['bag'] = bag
             messages.success(request, f'Removed {product.name} from basket')
             return HttpResponse(status=200)
-          
+
         else:
             messages.error(request, f'Something went wrong!')
             return HttpResponse(status=404)
