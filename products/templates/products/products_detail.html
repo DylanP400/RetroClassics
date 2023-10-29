@@ -168,6 +168,14 @@
                                         </a>
                                     </p>
                                     {% endif %}
+                                    {% if request.user.is_superuser %}
+                                    <small>
+                                        <a href="{% url 'edit_product' product.id %}"
+                                            class="text-white btn-sm bg-green">Edit</a>
+                                        <a href="{% url 'delete_product' product.id %}"
+                                            class="text-white btn-sm bg-red">Delete</a>
+                                    </small>
+                                    {% endif %}
                                 </div>
                             </div>
                         </div>
