@@ -28,9 +28,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'DEVELOPMENT' in os.environ
+# DEBUG = 'DEVELOPMENT' in os.environ
+DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', 'retro-classics-c87d5f7b23d0.herokuapp.com']
+# Debug commented out because it gave a bad request 400 error and server wouldnt start.
+
+ALLOWED_HOSTS = ['8000-dylanp400-retroclassics-lhapwo8bmm9.ws-eu105.gitpod.io', 'retro-classics-c87d5f7b23d0.herokuapp.com']
 
 
 # Application definition
