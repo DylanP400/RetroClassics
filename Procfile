@@ -1,1 +1,1 @@
-web: gunicorn retro-classics.wsgi:application
+web: gunicorn retro_classics.wsgi:application
