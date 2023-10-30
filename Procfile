@@ -1,0 +1,1 @@
+web: gunicorn retro-classics.wsgi:application
