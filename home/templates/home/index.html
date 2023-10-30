@@ -4,15 +4,15 @@
 {% block pageheader %}
 <div class="container header-container mb-5">
     <div class="row">
-        <div class="col"></div>
+        <div class="col mb-5"></div>
     </div>
 </div>
 {% endblock %}
 
 {% block content %}
-<section class="container-fluid mt-5 callout-display">
+<section class="container-fluid callout-display mb-1 h-100">
     <div class="darken-image"></div>
-    <div class="container h-100">
+    <div class="container h-100 pb-5">
         <div class="row d-flex justify-content-center align-items-center">
             <div class="col-12 col-md-12 my-auto">
                 <h1 class="display-4 robo-font text-white callout-head mt-5">
@@ -24,11 +24,71 @@
                     take you
                     back in time.</p>
                 <div class="my-2">
-                    <h4>
+                    <h4 class="mb-5">
                         <a href="{% url 'products' %}"
                             class="btn btn-lg shop-now-btn text-white rounded-2 text-uppercase py-1">Shop
                             Now</a>
                     </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container-fluid bg-blue mt-5 h-100">
+    <h2 class="text-white text-center pt-5 pb-2">
+        <a href="{% url 'products' %}?on_sale=True" class="text-white robo-font">Check
+            out our sale</a>
+    </h2>
+    <div class="row">
+        {% for product in sale_products %}
+        <div class="col-md-3">
+            <div class="card h-100 bg-lt-blu yellow-border mb-2">
+                <img src="{{ product.image.url }}" class="card-img-top bg-white" alt="{{ product.name }}">
+                <div class="card-body text-white">
+                    <h5 class="card-title robo-font">{{ product.name }}</h5>
+                    <p class="card-text karma-font">{{ product.description }}</p>
+                    <p class="card-text">Price: ${{ product.price }}</p>
+                </div>
+                <div class="card-footer text-center bg-lt-blu">
+                    <a href="{% url 'product_detail' product.id %}" class="btn bg-yellow text-center blue">View
+                        Product</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<section class="bg-blue p-0 m-0">
+    <div class="row">
+        <div class="col-12 mt-5">
+            <h2 class="text-uppercase text-center mt-5 text-white robo-font">Testimonials</h2>
+            <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="card bg-lt-blu m-3">
+                <div class="card-body yellow-border">
+                    <h5 class="card-title text-white robo-font">Dylan Mc Mahon</h5>
+                    <p class="card-text text-white karma-font">Retro Classics is my favourite online store for retro
+                        gaming it has
+                        all the old nintendo games I played when i was a kid.</p>
+                    <small class="text-yellow">Rating: <i class="fa-solid fa-star fa-beat fa-2xs"></i><span>
+                            5</span></small>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="card bg-lt-blu m-3 yellow-border">
+                <div class="card-body text-white">
+                    <h5 class="card-title robo-font">Robert O'brien</h5>
+                    <p class="card-text karma-font">I have been shopping with Retro Classics for years. It is my go too
+                        for
+                        Playstation one and two games</p>
+                    <small class="text-yellow">Rating: <i class="fa-solid fa-star fa-beat fa-2xs"></i><span>
+                            5</span></small>
                 </div>
             </div>
         </div>
