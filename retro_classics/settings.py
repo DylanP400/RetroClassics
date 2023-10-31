@@ -33,6 +33,7 @@ DEBUG = True
 
 # Debug commented out because it gave a bad request 400 error and server would not start.
 
+
 ALLOWED_HOSTS = ['8000-dylanp400-retroclassics-lhapwo8bmm9.ws-eu105.gitpod.io', 'retro-classics-c87d5f7b23d0.herokuapp.com']
 
 
