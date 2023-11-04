@@ -42,7 +42,7 @@
                                 <td class="p-md-3 w-md-25">
                                     {% if item.product.image %}
                                     <img class="w-100 img-custom rounded" alt="{{ item.product.name }}"
-                                        src="{{ item.product.image.url }}">
+                                        src="{{ item.product.image.url }}" aria-label="Product image">
                                     {% else %}
                                     <img class="w-100 img-custom rounded" alt="No image"
                                         src="{{ MEDIA_URL }}noimage.png">

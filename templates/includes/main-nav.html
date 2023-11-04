@@ -13,7 +13,8 @@
                     <input class="form-control border border-black rounded-0" type="text" name="q"
                         placeholder="Insert Coin">
                     <div class="input-group-append">
-                        <button class="form-control btn btn-blue border border-blue rounded-0" type="submit">
+                        <button class="form-control btn btn-blue border border-blue rounded-0" title="Search"
+                            type="submit">
                             <span class="icon">
                                 <i class="fas fa-search"></i>
                             </span>
@@ -26,13 +27,13 @@
             <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                 <li class="list-inline-item dropdown">
                     <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
+                        aria-haspopup="true" aria-expanded="false" aria-label="My Account">
                         <div class="text-center">
                             <div><i class="fas fa-user fa-lg blue"></i></div>
                             <p class="my-0 blue font-weight-bold">My Account</p>
                         </div>
                     </a>
-                    <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                    <div class="dropdown-menu border-0">
                         {% if request.user.is_authenticated %}
                         {% if request.user.is_superuser %}
                         <a href="{% url 'add_product' %}" class="dropdown-item lt-blue font-weight-bold">Product
@@ -143,7 +144,8 @@
                                         class="dropdown-item lt-blue font-weight-bold">Raspberry Pi 4</a>
                                 </div>
                             </div>
-                            <a href="{% url 'products' %}?category=playstation_one_console,playstation_two_console,nintendo_snes_console,nintendo_64_console,sega_genesis_console,gameboy_advanced_console,playstation_portable_console,raspberry_pi_console"
+                            <a href="{% url 'products' %}?category=playstation_one_console,playstation_two_console,nintendo_snes_console,nintendo_64_console,
+                            sega_genesis_console,gameboy_advanced_console,playstation_portable_console,raspberry_pi_console"
                                 class="dropdown-item blue font-weight-bold">All Consoles</a>
                         </div>
                     </li>
