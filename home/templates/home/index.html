@@ -35,7 +35,7 @@
     </div>
 </section>
 
-<section class="container-fluid bg-blue mt-5 h-100">
+<section class="container-fluid bg-lt-blu mt-5 h-100">
     <h2 class="text-white text-center pt-5 pb-2">
         <a href="{% url 'products' %}?on_sale=True" class="text-white robo-font">Check
             out our sale</a>
@@ -43,10 +43,10 @@
     <div class="row">
         {% for product in sale_products %}
         <div class="col-md-3">
-            <div class="card h-100 bg-lt-blu yellow-border mb-2">
+            <div class="card h-100 bg-lt-blu border-blue mb-2">
                 <img src="{{ product.image.url }}" class="card-img-top bg-white" alt="{{ product.name }}">
                 <div class="card-body text-white">
-                    <h5 class="card-title robo-font">{{ product.name }}</h5>
+                    <h5 class="card-title robo-font font-weight-bold">{{ product.name }}</h5>
                     <p class="card-text karma-font">{{ product.description }}</p>
                     <p class="card-text">Price: ${{ product.price }}</p>
                 </div>
@@ -60,7 +60,7 @@
     </div>
 </section>
 
-<section class="bg-blue p-0 m-0">
+<section class="bg-lt-blu p-0 m-0">
     <div class="row">
         <div class="col-12 mt-5">
             <h2 class="text-uppercase text-center mt-5 text-white robo-font">Testimonials</h2>
@@ -70,7 +70,7 @@
     <div class="row">
         <div class="col-sm-6">
             <div class="card bg-lt-blu m-3">
-                <div class="card-body yellow-border">
+                <div class="card-body border-blue">
                     <h5 class="card-title text-white robo-font">Dylan Mc Mahon</h5>
                     <p class="card-text text-white karma-font">Retro Classics is my favourite online store for retro
                         gaming it has
@@ -81,7 +81,7 @@
             </div>
         </div>
         <div class="col-sm-6">
-            <div class="card bg-lt-blu m-3 yellow-border">
+            <div class="card bg-lt-blu m-3 border-blue">
                 <div class="card-body text-white">
                     <h5 class="card-title robo-font">Robert O'brien</h5>
                     <p class="card-text karma-font">I have been shopping with Retro Classics for years. It is my go too
