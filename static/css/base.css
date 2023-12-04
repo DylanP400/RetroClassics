@@ -5,6 +5,8 @@ body {
     background-size: cover;
     height: 100%;
     width: 100%;
+    padding: 0;
+    margin: 0;
 }
 
 hr {
@@ -154,6 +156,7 @@ p {
 
 header {
     height: auto;
+    width: 100%;
 }
 
 
@@ -429,7 +432,7 @@ header {
 
 footer {
     height: auto;
-    width: auto;
+    width: 100%;
     background-color: #3e7cb1;
     margin-top: 150px;
     padding-bottom: 30px;
@@ -600,4 +603,23 @@ footer {
         background-color: #054a91;
     }
 
+    .opening-times {
+        font-size: 12px;
+    }
+
+    .opening-times h3 {
+        font-size: 16px;
+    }
+
+    .contact-us {
+        font-size: 14px;
+    }
+
+    .contact-us h3 {
+        font-size: 16px;
+    }
+
+    .social-media h3 {
+        font-size: 18px;
+    }
 }
