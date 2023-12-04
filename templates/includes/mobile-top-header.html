@@ -51,9 +51,9 @@
             <div><i class="fas fa-basket-shopping fa-lg blue sm-icons"></i></div>
             <p class="my-0 lt-blue sm-icons">
                 {% if grand_total %}
-                ${{ grand_total|floatformat:2 }}
+                €{{ grand_total|floatformat:2 }}
                 {% else %}
-                $0.00
+                €0.00
                 {% endif %}
             </p>
         </div>

@@ -37,7 +37,7 @@
                                 <td class="py-3 sm">
                                     <p class="my-0 text-white"><strong>{{ item.product.name }}</strong></p>
                                     <p class="my-0 small text-yellow">SKU: {{ item.product.sku|upper }}</p>
-                                    <p class="my-0 d-block d-sm-none text-yellow">£{{ item.product.price }}</p>
+                                    <p class="my-0 d-block d-sm-none text-yellow">€{{ item.product.price }}</p>
                                 </td>
                                 <td class="p-md-3 w-md-25">
                                     {% if item.product.image %}
@@ -84,7 +84,7 @@
                                         data-product_size="{{ item.size }}"><small>Remove</small></a>
                                 </td>
                                 <td class="py-3 sm d-none d-md-block">
-                                    <p class="my-0 text-yellow">£{{ item.product.price }}</p>
+                                    <p class="my-0 text-yellow">€{{ item.product.price }}</p>
                                 </td>
                             </tr>
                             {% endfor %}
@@ -112,19 +112,19 @@
             </div>
             <div class="card">
                 <div class="card-body bg-lt-blu yellow-border">
-                    <p class="text-yellow"><strong class="text-white">Total price:</strong> £{{ total|floatformat:2 }}
+                    <p class="text-yellow"><strong class="text-white">Total price:</strong> €{{ total|floatformat:2 }}
                     </p>
-                    <p class="text-yellow"><strong class="text-white">Delivery:</strong> £{{ delivery|floatformat:2 }}
+                    <p class="text-yellow"><strong class="text-white">Delivery:</strong> €{{ delivery|floatformat:2 }}
                     </p>
                     {% if free_delivery_delta > 0 %}
                     <p class="text-white delivery-banner">
                         You could get free delivery by spending just <strong
-                            class="text-yellow">£{{ free_delivery_delta }}</strong>
+                            class="text-yellow">€{{ free_delivery_delta }}</strong>
                         more!
                     </p>
                     {% endif %}
                     <p class="text-yellow"><strong class="text-white">Grand Total:</strong>
-                        £{{ grand_total|floatformat:2 }}</p>
+                        €{{ grand_total|floatformat:2 }}</p>
                     {% endif %}
                     <hr>
                     <a href="{% url 'products' %}" class="btn btn-out bg-blue btn-square btn-main text-white">

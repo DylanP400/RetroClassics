@@ -20,7 +20,7 @@
     <div class="row">
         <div class="col mt-5">
             <hr>
-            <h2 class="logo-font mt-5 mb-4 text-white robo-font">Checkout</h2>
+            <h2 class="logo-font mt-3 mb-4 text-white robo-font">Checkout</h2>
             <hr>
         </div>
     </div>
@@ -52,7 +52,7 @@
                     <p class="my-0 small text-white">Qty: <span class="text-yellow">{{ item.quantity }}</span></p>
                 </div>
                 <div class="col-3 text-right">
-                    <p class="my-0 text-yellow">£{{ item.product.price | calc_subtotal:item.quantity }}</p>
+                    <p class="my-0 text-yellow">€{{ item.product.price | calc_subtotal:item.quantity }}</p>
                 </div>
             </div>
             {% endfor %}
@@ -64,9 +64,9 @@
                     <p class="my-0">Grand Total:</p>
                 </div>
                 <div class="col-3 text-yellow">
-                    <p class="my-0 mt-2">£{{ total | floatformat:2 }}</p>
-                    <p class="my-0">£{{ delivery | floatformat:2 }}</p>
-                    <p class="my-0"><strong>£{{ grand_total | floatformat:2 }}</strong></p>
+                    <p class="my-0 mt-2">€{{ total | floatformat:2 }}</p>
+                    <p class="my-0">€{{ delivery | floatformat:2 }}</p>
+                    <p class="my-0"><strong>€{{ grand_total | floatformat:2 }}</strong></p>
                 </div>
             </div>
         </div>
@@ -132,7 +132,7 @@
                             <i class="fas fa-exclamation-circle text-red"></i>
                         </span>
                         <span>Your card will be charged <strong
-                                class="text-yellow">£{{ grand_total|floatformat:2 }}</strong></span>
+                                class="text-yellow">€{{ grand_total|floatformat:2 }}</strong></span>
                     </p>
                 </div>
             </form>

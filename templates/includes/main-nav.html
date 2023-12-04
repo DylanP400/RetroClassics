@@ -54,9 +54,9 @@
                             <div><i class="fas fa-basket-shopping fa-lg blue"></i></div>
                             <p class="my-0 lt-blue font-weight-bold">
                                 {% if grand_total %}
-                                ${{ grand_total|floatformat:2 }}
+                                €{{ grand_total|floatformat:2 }}
                                 {% else %}
-                                $0.00
+                                €0.00
                                 {% endif %}
                             </p>
                         </div>
@@ -198,7 +198,7 @@
     <div id="delivery-banner" class="row text-center">
         <div class="col blue text-white">
             <h4 class="robo-font my-1">Free delivery on orders over <span
-                    class="text-yellow">£{{ free_delivery_threshold }}</span>!</h4>
+                    class="text-yellow">€{{ free_delivery_threshold }}</span>!</h4>
         </div>
     </div>
 </header>
