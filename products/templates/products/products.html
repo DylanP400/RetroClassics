@@ -111,12 +111,14 @@
                             </p>
                             {% endif %}
                             {% if request.user.is_superuser %}
-                            <small>
-                                <a href="{% url 'edit_product' product.id %}"
-                                    class="text-white btn-sm bg-green">Edit</a>
-                                <a href="{% url 'delete_product' product.id %}"
-                                    class="text-white btn-sm bg-red">Delete</a>
-                            </small>
+                            <div class="row">
+                                <div class="col text-center mt-2"><small>
+                                    <a href="{% url 'edit_product' product.id %}"
+                                        class="text-white btn-sm bg-green text-center">Edit</a>
+                                    <a href="{% url 'delete_product' product.id %}"
+                                        class="text-white btn-sm bg-red text-center">Delete</a>
+                                </small></div>
+                            </div>
                             {% endif %}
                         </div>
                     </div>

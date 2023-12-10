@@ -13,20 +13,28 @@
 {% block content %}
 <div class="overlay"></div>
 <div class="container-fluid mb-4 mt-1">
+    <div class="row">
+        <div class="col text-center">
+            {% if request.user.is_superuser %}
+                <small>
+                    <a href="{% url 'edit_product' product.id %}"
+                        class="text-white btn bg-green">Edit</a>
+                    <a href="{% url 'delete_product' product.id %}"
+                        class="text-white btn bg-red">Delete</a>
+                </small>
+            {% endif %}
+        </div>
+    </div>
     <div class="row product-detail">
         <div class="col-md-6 col-sm-12">
             <div class="row">
                 <div class="col-md-12">
                     <div class="card h-100 product-card karma-font border-blue">
                         {% if product.image %}
-                        <a href="{{ product.img.url }}" target="_blank">
                             <img class="card-img-top img-fluid mt-2" src="{{ product.image.url }}"
                                 alt="{{ product.name }}">
-                        </a>
                         {% else %}
-                        <a href="{{ product.img.url }}">
                             <img class="card-img-top" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
-                        </a>
                         {% endif %}
                         <div class="card-body">
                             <h5 class="card-title text-center m-0 text-black prod-name">{{ product.name }}</h5>
@@ -168,14 +176,7 @@
                                         </a>
                                     </p>
                                     {% endif %}
-                                    {% if request.user.is_superuser %}
-                                    <small>
-                                        <a href="{% url 'edit_product' product.id %}"
-                                            class="text-white btn-sm bg-green">Edit</a>
-                                        <a href="{% url 'delete_product' product.id %}"
-                                            class="text-white btn-sm bg-red">Delete</a>
-                                    </small>
-                                    {% endif %}
+                                    
                                 </div>
                             </div>
                         </div>
