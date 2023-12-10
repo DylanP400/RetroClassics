@@ -19,7 +19,7 @@
     <div class="row">
         <div class="col">
             <hr>
-            <h2 class="logo-font mt-2 mb-2 text-white robo-font">My Profile</h2>
+            <h2 class="logo-font mt-2 mt-md-0 mb-2 text-white robo-font">My Profile</h2>
             <hr>
         </div>
     </div>
@@ -29,16 +29,16 @@
             <form class="mt-3" action="{% url 'profile' %}" method="POST" id="profile-update-form">
                 {% csrf_token %}
                 {{ form|crispy }}
-                <button type="submit" class="btn bg-yellow blue rounded-0 text-uppercase float-right">Update
+                <button type="submit" class="btn bg-yellow text-black rounded-1 text-uppercase float-right">Update
                     Information</button>
             </form>
         </div>
         <div class="col-12 col-lg-6">
-            <p class="text-yellow">Order History</p>
+            <h4 class="text-white text-center">Order History</h4>
             <div class="order-history table-responsive">
                 <table class="table table-sm table-borderless">
                     <thead>
-                        <tr class="text-white">
+                        <tr class="text-yellow">
                             <th scope="col">Order Number</th>
                             <th scope="col">Date</th>
                             <th scope="col">Items</th>
@@ -52,9 +52,9 @@
                                 <a href="{% url 'order_history' order.order_number %}" class="text-yellow"
                                     title="{{ order.order_number }}">{{ order.order_number|truncatechars:6 }}</a>
                             </td>
-                            <td class="text-yellow">{{ order.date }}</td>
+                            <td class="text-white">{{ order.date }}</td>
                             <td>
-                                <ul class="list-unstyled text-yellow">
+                                <ul class="list-unstyled text-white">
                                     {% for item in order.lineitems.all %}
                                     <li class="small">
                                         {{ item.product.name }}
@@ -65,7 +65,7 @@
                                     {% endfor %}
                                 </ul>
                             </td>
-                            <td class="text-yellow">£{{ order.grand_total }}</td>
+                            <td class="text-white">£{{ order.grand_total }}</td>
                         </tr>
                         {% endfor %}
                     </tbody>
