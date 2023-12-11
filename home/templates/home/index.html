@@ -10,12 +10,13 @@
 {% endblock %}
 
 {% block content %}
-<section class="container-fluid callout-display mb-1 h-100">
+<section class="container-fluid callout-display h-100">
+    <div class="darken-image" id="bg-img"></div>
     <div class="darken-image"></div>
-    <div class="container h-100 pb-5">
+    <div class="container h-100">
         <div class="row d-flex justify-content-center align-items-center">
-            <div class="col-12 col-md-12 my-auto">
-                <h1 class="display-4 robo-font text-white callout-head mt-5">
+            <div class="col-12 col-md-12 my-4">
+                <h1 class="display-4 robo-font text-white callout-head mt-md-0 mt-5">
                     Unlock Nostalgia: Shop Retro, Feel Classic!
                 </h1>
                 <p class="karma-font text-white callout-p">Discover a unique collection of retro games &amp;
@@ -24,7 +25,7 @@
                     take you
                     back in time.</p>
                 <div class="my-2">
-                    <h4 class="mb-5">
+                    <h4 class="mb-5 mb-md-0">
                         <a href="{% url 'products' %}"
                             class="btn btn-lg shop-now-btn text-white rounded-2 text-uppercase py-1">Shop
                             Now</a>
@@ -35,11 +36,15 @@
     </div>
 </section>
 
-<section class="container-fluid bg-lt-blu mt-5 h-100">
-    <h2 class="text-white text-center pt-5 pb-2">
+<section class="container-fluid bg-lt-blu h-100">
+    <div class="row mt-5">
+        <div class="col mt-5">
+    <h2 class="text-white text-center pt-5 pb-2 mt-5 mt-md-1 mb-4">
         <a href="{% url 'products' %}?on_sale=True" class="text-white robo-font">Check
             out our sale</a>
     </h2>
+</div>
+</div>
     <div class="row">
         {% for product in sale_products %}
         <div class="col-md-3">
