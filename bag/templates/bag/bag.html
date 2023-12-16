@@ -2,9 +2,9 @@
 {% load static %}
 {% load bag_tools %}
 {% block pageheader %}
-<div class="container header-container mb-0 mb-md-4 mb-lg-0">
+<div class="container header-container mb-5 mb-md-4">
     <div class="row">
-        <div class="col"></div>
+        <div class="col mb-4 mb-md-0"></div>
     </div>
 </div>
 {% endblock %}
@@ -125,6 +125,8 @@
                     {% endif %}
                     <p class="text-yellow"><strong class="text-white">Grand Total:</strong>
                         €{{ grand_total|floatformat:2 }}</p>
+                        {% else %}
+                        <p class="text-white">Sorry, you have no items in your basket. <a href="{% url 'products' %}" class="text-yellow">Browse Products</a></p>
                     {% endif %}
                     <hr>
                     <a href="{% url 'products' %}" class="btn btn-out bg-blue btn-square btn-main text-white">
