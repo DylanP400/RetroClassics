@@ -11,9 +11,9 @@
             <form method="GET" action="{% url 'products' %}">
                 <div class="input-group w-100">
                     <input class="form-control border border-black rounded-0" type="text" name="q"
-                        placeholder="Insert Coin">
+                        placeholder="Insert Coin" title="Search">
                     <div class="input-group-append">
-                        <button class="form-control btn btn-blue border border-blue rounded-0" title="Search"
+                        <button class="form-control btn btn-blue border border-blue rounded-0" title="Search bar button"
                             type="submit">
                             <span class="icon">
                                 <i class="fas fa-search"></i>
@@ -27,10 +27,10 @@
             <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                 <li class="list-inline-item dropdown">
                     <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false" aria-label="My Account">
+                        aria-haspopup="true" aria-expanded="false" aria-label="Account">
                         <div class="text-center">
                             <div><i class="fas fa-user fa-lg blue"></i></div>
-                            <p class="my-0 blue font-weight-bold">My Account</p>
+                            <p class="my-0 blue font-weight-bold">Account</p>
                         </div>
                     </a>
                     <div class="dropdown-menu border-0">
@@ -39,7 +39,7 @@
                         <a href="{% url 'add_product' %}" class="dropdown-item lt-blue font-weight-bold">Product
                             Management</a>
                         {% endif %}
-                        <a href="{% url 'profile' %}" class="dropdown-item lt-blue font-weight-bold">My Profile</a>
+                        <a href="{% url 'profile' %}" class="dropdown-item lt-blue font-weight-bold">Profile</a>
                         <a href="{% url 'account_logout' %}" class="dropdown-item lt-blue font-weight-bold">Logout</a>
                         {% else %}
                         <a href="{% url 'account_signup' %}" class="dropdown-item lt-blue font-weight-bold">Register</a>
@@ -197,7 +197,7 @@
     </div>
     <div id="delivery-banner" class="row text-center">
         <div class="col blue text-white">
-            <h4 class="robo-font my-1">Free delivery on orders over <span
+            <h4 class="robo-font my-1 fs-sm">Free delivery on orders over <span
                     class="text-yellow">€{{ free_delivery_threshold }}</span>!</h4>
         </div>
     </div>
