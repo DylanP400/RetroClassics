@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /bag/
+Disallow: /profiles/
+Sitemap: https://retro-classics-c87d5f7b23d0.herokuapp.com/sitemap.xml
