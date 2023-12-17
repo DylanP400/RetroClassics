@@ -15,4 +15,4 @@ urlpatterns = [
     path('profile/', include('profiles.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-handler404 = 'retro_classics.views.custom_404'
+handler404 = views.custom_404
