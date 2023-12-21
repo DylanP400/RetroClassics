@@ -31,6 +31,8 @@ Retro Classics is built using a combination of HTML, CSS, JavaScript, Python, an
 * [Technologies Used](#technologies-used)
 
 * [Deployment](#deployment)
+  
+  * [ElephantSQL](#elephantsql-database-setup)
 
 ## User Experience
 
@@ -150,7 +152,64 @@ Retro Classics is built using a combination of HTML, CSS, JavaScript, Python, an
 
 ## Deployment
 
-<!-- ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png) -->
+### ElephantSQL Database Setup
+
+### Step 1: Obtain ElephantSQL Database URL
+
+1. **Sign up or sign in to ElephantSQL:**
+   * If you don't have an account, sign up otherwise, log in to your account.
+
+2. **Create a new ElephantSQL instance:**
+   * From the dashboard, click on `Create New Instance`.
+   * Choose a plan based on your requirements.
+
+3. **Retrieve your ElephantSQL Database URL:**
+   * Once the instance is created, click on it to view details.
+   * Find and copy the `URL` provided this is your `ElephantSQL Database URL`.
+
+### Step 2: Configure Django Project
+
+1. **Add DATABASE_URL to env.py:**
+   * Open your `env.py` file.
+   * Set `DATABASE_URL` to the value obtained from ElephantSQL.
+
+### Step 3: Use DATABASE_URL in Django Settings
+
+1. **Update Django Settings:**
+   * Open your `settings.py` file in your Django project.
+   * Locate the `DATABASES` configuration.
+   * Comment out the orignal django database settings
+   * Update the `DATABASES` setting to use the `dj_database_url` package:
+
+     ```python
+     import dj_database_url
+     # At the top of settings.py with the other imports
+
+     DATABASES = {
+     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+      }
+      # Replace the orignal database with what is above
+
+     ```
+
+   * This allows your Django project to use the ElephantSQL Database URL.
+
+2. **Migrate Database Changes:**
+   * Run the following commands in your terminal:
+
+     ```bash
+     python manage.py makemigrations
+     python manage.py migrate
+     ```
+
+   * This ensures that your database is updated with the latest changes.
+
+* **Note: Upcoming Changes to ElephantSQL Free Tier**
+  
+  * ElephantSQL is making changes to its free tier in the next few months. If you're using or planning to use the free tier, be prepared for some tweaks in the deployment process.
+  As of now, the steps in this guide are based on the current ElephantSQL setup. ElephantSQL will have updates regarding these changes check their official announcements and documentation for the latest info. If you run into any deployment problems or notice any differences refer to the updated ElephantSQL docs.
+
+![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
 <!-- # Imagery 
 https://pixabay.com/images/search/retro%20gaming/?pagi=2
