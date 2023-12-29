@@ -148,6 +148,168 @@ Retro Classics is built using a combination of HTML, CSS, JavaScript, Python, an
 
 ### Existing Features
 
+### Header and Nav Bar
+
+The Retro Classics Store features a logo. At the top of the page, users can easily navigate through the store with a search bar. The account icon provides access for signing in or creating a new account. The basket icon allows users to view the contents of their shopping basket, with the total displayed underneath. The navigation bar categorizes the store into "All Products," "Consoles," "Games," and "Accessories,". Plus, a noticeable free delivery banner in the header treats users to free shipping on orders over €100.
+![Header and Nav Bar](./media/readme/features/header-nav/header-and-navbar.png)
+
+* **All Products**.
+
+  * On Sale!
+
+  * By Price.
+
+  * By Rating.
+
+  * By Players.
+
+  * All Products.
+
+* **Consoles.**
+
+  * Playstation.
+    * Playstation One.
+    * Playstation Two.
+
+  * Nintendo.
+    * Nintendo SNES.
+    * Nintendo 64.
+
+  * Sega
+    * Sega Genesis.
+
+  * Handheld
+    * Gameboy Advanced.
+    * Playstation Portable.
+
+  * Emulation
+    * Raspberry Pi 4.
+
+  * All Consoles.
+  
+* **Games.**
+
+  * Playstation One.
+
+  * Playstation Two.
+
+  * Nintendo SNES.
+
+  * Nintendo 64.
+
+  * Sega Genesis.
+
+  * Gameboy Advanced.
+
+  * Playstation Portable.
+
+  * Raspberry Pi 4.
+
+  * All Games.
+
+* **Accessories.**
+
+  * Controllers.
+
+  * Memory Cards.
+
+  * Cables & Adapters.
+
+  * All Accessories.
+
+![All Products](./media/readme/features/header-nav/navbar-all-products-open.png)
+![Consoles](./media/readme/features/header-nav/navbar-consoles-open.png)
+![Consoles Open](./media/readme/features/header-nav/nav-consoles-nintendo.png)
+![Games](./media/readme/features/header-nav/navbar-games-open.png)
+![Accessories](./media/readme/features/header-nav/navbar-accessories-open.png)
+
+* **Free delivery banner for orders over €100.**
+
+## Footer
+
+* The footer has four main section.
+
+  * Newsletter for signing up.
+
+  * Opening Times.
+
+  * Contact us with phone number and email address for the store.
+
+  * Follow us with four social media icons for Facebook, Twitter, Linkedin and Github.
+
+![Footer](./media/readme/features/home-page/footer.png)
+
+## Home Page
+
+The home page of the Retro Classics Store welcomes visitors with a callout inviting users to "Unlock Nostalgia: Shop Retro, Feel Classic! Discover a unique collection of retro games & consoles that take you back in time." and a background image featuring six arcade machines. The inviting message sets the nostalgic tone for the shopping experience. A "Shop Now" button encourages users to explore the products of the store. As users scroll down, they encounter a header announcing the ongoing sale. The "Check Out Our Sale" section showcases four highlighted products. Continue scrolling users are greeted by another header titled "Testimonials." This section has two testimonials from customers who share their positive experiences with the Retro Classics Store.
+![Home Page](./media/readme/features/home-page/home-page.png)
+
+### Products on sale
+
+* Heading saying "Check out our sale"
+* Four products are displayed on the home page with the photos, names, descriptions and prices with a button to view to product underneath
+
+![Check out our sale](./media/readme/features/home-page/sale.png)
+![Check out our sale](./media/readme/features/home-page/sale-2.png)
+
+### Testimonials
+
+* The testimonial section just has two reviews left by customers.
+
+![Testimonial](./media/readme/features/home-page/testimonials.png)
+
+## All Products
+
+The All Products page features a clean layout with a small heading on the left indicating the total number of products available. A sorting box on the right allows users to arrange products based on various criteria. Product cards are displayed in rows, each showcasing an image, product name, price, rating, and release date. Clicking on the image leads to the detailed product page, while a link on each card invites users to explore more products in the selected category. If you are a superuser there is two buttons for editing and deleting the product
+![All Products](./media/readme/features/products/all-products.png)
+
+## Product Detail
+
+The product detail page features a product image, name, and price. A description along with details like rating, players, release date, color, and manufacturer and storage. Additional information includes storage options and memory card compatibility. Below, there's a user-friendly quantity selection box with plus and minus buttons and an "Add to Basket" button. Towards the bottom, two buttons allow users to explore more products or quickly browse products in the same category. If you are a superuser there is 2 buttons for editing and deleting the product
+![Product Detail](./media/readme/features/products/product-detail-1.png)
+![Product Detail](./media/readme/features/products/product-detail-2.png)
+
+## Product Management
+
+The product management page provides a simple form for adding new products. The form includes fields for Category, Name, SKU, Image, Description, Rating, Price, Players, and an option to mark the product as On Sale. Users can easily fill in these details. Two buttons are available for action: "Add Product" to save the information, and "Cancel" to discard changes if needed.
+![Product Detail](./media/readme/features/products/product-management-1.png)
+![Product Detail](./media/readme/features/products/product-management-2.png)
+
+## Profile
+
+The user profile page features an H1 title "Profile" serving as the main heading. The layout is divided into two sections for user convenience.
+On the left, users can easily update their information, including details like phone number and delivery address. A button labeled "Update Information" makes it easy to modify your details. On the right, a separate section displays the user's previous order history, providing a quick overview of past purchases.
+![Profile](./media/readme/features/profile/profile-1.png)
+
+## Shopping Basket
+
+If the user has no items in the shopping basket, the page will be empty with a paragraph saying, "Sorry, you have no items in your basket." and a link to Browse Products.
+![Empty Basket](./media/readme/features/basket/basket-1.png)
+The Shopping Basket page starts with a heading, "Shopping Basket." The table showcases product details: name, SKU, image, quantity, and price. On the right, you'll find a section labeled "Have a Coupon?" with an Apply button that is currently inactive. Below, a summary box highlights the total price, delivery cost, and grand total. Two buttons at the bottom ease navigation - "Continue Shopping" for more products and "Checkout" for the payment process.
+![Basket](./media/readme/features/basket/basket-2.png)
+
+## Checkout
+
+## Register
+
+The Register page presents a simple form for users to create an account. The form includes fields for email, username, and password.
+![Register](./media/readme/features/profile/register.png)
+
+## Sign In
+
+The Register page presents a simple form for users to sign up. The form includes fields for username, and password.
+![Sign In](./media/readme/features/profile/register.png)
+
+## Sign Out
+
+The Sign Out page presents a paragrapgh asking users "Are you sure you want to sign out?" with a button for logging out.
+![Sign Out](./media/readme/features/profile/logout.png)
+
+## Password Reset
+
+The Password Reset page presents a paragrapgh asking users "Forgotten your password? Enter your e-mail address below, and we'll send you an e-mail allowing you to reset it." with a button for resetting your password.
+![Sign Out](./media/readme/features/profile/password-reset.png)
+
 ### Future Features
 
 ## Testing
