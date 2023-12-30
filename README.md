@@ -94,6 +94,36 @@ Retro Classics is built using a combination of HTML, CSS, JavaScript, Python, an
 
 ### Agile Methodology
 
+This project was developed using **Agile methodologies** to facilitate flexibility and iterative progress. Embracing an adaptive planning process allowed me to continuously improve and respond to evolving project needs.
+
+### User Stories and MOSCOW Prioritization
+
+To outline project features, I defined user stories short descriptions from an end user's perspective. Employing the MOSCOW technique helped me prioritize these features effectively:
+
+* **Must-Have:** Identified critical features essential for project success.
+* **Should-Have:** Important features that were not immediately critical.
+* **Could-Have:** Considered features that could be included if time allowed.
+* **Wont-Have:** Acknowledged nice-to-haves that were intentionally excluded from the current scope.
+
+MOSCOW prioritization guided me in managing expectations, focusing on key deliverables, and navigating the development process.
+
+### Kanban Board for Task Management
+
+I utilized a Kanban board to visually manage the flow of work throughout the project. The board's columns included:
+
+* **To Do:** Tasks (user stories) planned for development.
+* **In Progress:** Tasks actively being worked on.
+* **Done** Tasks that have been finished.
+* **Future Features:** Tasks that will be added in the future.
+* **Wont Have** Tasks that wont be included in the project.
+
+This Kanban board provided a clear visual representation of my project's progress, making it easier to track and manage tasks.
+[Link to project Kanban board.](https://github.com/users/DylanP400/projects/8)
+
+
+[Back to top](#retro-classics)
+
+
 ### Initial Discussion
 
 ## Design
