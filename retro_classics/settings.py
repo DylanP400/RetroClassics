@@ -207,6 +207,11 @@ CLOUDINARY_STORAGE = {
     'CLOUDINARY_SECRET': os.environ.get('CLOUDINARY_SECRET'),
 }
 
+MIME_TYPES = {
+    'css': 'text/css',
+    'js': 'text/javascript',
+}
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
