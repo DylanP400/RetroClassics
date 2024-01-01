@@ -92,6 +92,32 @@ Retro Classics is built using a combination of HTML, CSS, JavaScript, Python, an
 
     * As a **developer**, I want to **manage static and media files** effectively to ensure **quick page loads and optimized performance**.
 
+* **Iteration 3**
+
+  * **USER STORY:** *Footer.*
+
+    * As a **website visitor**, I want to **easily find store information** and have the option to **subscribe to a newsletter**, so that I can **stay informed about the latest updates and promotions.**
+  
+  * **USER STORY** *Testimonials*
+
+    * As a **website visitor**, I want to **read testimonials on the home page** to gain **insights into the experiences of other customers.**
+
+  * **USER STORY:** *PRODUCTS ON SALE*
+
+    * As a **website visitor**, I want to **explore discounted products** on the home page, so that I can **make informed purchase decisions and understand the quality of the products.**
+
+  * **USER STORY:** *Profile App*
+
+    * As a **Customer** I want to be able to **manage my profile information** so that I can **keep my details up to date and make checkout quicker and easier**.
+  
+  * **USER STORY** *Checkout App*
+
+    * As an  **online shopper**, I want to **securely complete my purchase using a credit card**, so that I can **efficiently and confidently buy the items in my cart.**
+  
+  * **USER STORY:** *Back To Top Button*
+
+    * As a **developer** I want **a Back To Top Button** so that **users can jump back to the top of the page**
+
 ### Agile Methodology
 
 This project was developed using **Agile methodologies** to facilitate flexibility and iterative progress. Embracing an adaptive planning process allowed me to continuously improve and respond to evolving project needs.
