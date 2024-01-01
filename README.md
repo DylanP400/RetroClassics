@@ -8,6 +8,8 @@ Retro Classics is built using a combination of HTML, CSS, JavaScript, Python, an
 
   * [User Stories](#user-stories)
 
+  * [Site Goals](#site-goals)
+
   * [Initial Discussion](#initial-discussion)
 
   * [Agile Methodology](#agile-methodology)
@@ -117,6 +119,16 @@ Retro Classics is built using a combination of HTML, CSS, JavaScript, Python, an
   * **USER STORY:** *Back To Top Button*
 
     * As a **developer** I want **a Back To Top Button** so that **users can jump back to the top of the page**
+
+### Site Goals
+
+1. Collecting a variety of classic games and consoles, so users can enjoy some nostalgic gaming moments.
+2. Offering users a variety of gaming consoles to suit different tastes of retro gaming fans.
+3. To create a visually appealing and responsive design using Bootstrap, ensuring a consistent user experience across different devices.
+4. Ensuring secure and smooth transactions with the seamless integration of Stripe during the checkout process.
+5. To enable users to create and personalize profiles, managing their order history within the Retro Classics platform.
+6. To implement an efficient search and navigation system, allowing users to easily discover their favorite retro games, consoles, and accessories.
+7. To establish a secure backend infrastructure with Django, handling user data, order processing, and overall system functionality.
 
 ### Agile Methodology
 
