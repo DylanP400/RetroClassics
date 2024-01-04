@@ -158,9 +158,7 @@ I utilized a Kanban board to visually manage the flow of work throughout the pro
 This Kanban board provided a clear visual representation of my project's progress, making it easier to track and manage tasks.
 [Link to project Kanban board.](https://github.com/users/DylanP400/projects/8)
 
-
 [Back to top](#retro-classics)
-
 
 ### Initial Discussion
 
@@ -358,6 +356,16 @@ The Shopping Basket page starts with a heading, "Shopping Basket." The table sho
 
 ## Checkout
 
+The Checkout page is divided into two sections. On the left, you'll find fields for entering your full name, email address, phone number, street addresses, town or city, county or state, eircode, and country. Below, there's a section for card details, accompanied by buttons for adjusting the bag and completing the order. The total charge is displayed underneath these buttons. On the right, the Order Summary displays product images, names, quantities, and subtotals, ensuring a clear overview of your selected items during the checkout process.
+![Checkout](./media/readme/features/basket/checkout.png)
+![Checkout](./media/readme/features/basket/checkout2.png)
+![Checkout](./media/readme/features/basket/checkout3.png)
+
+## Checkout Success
+
+After successfully completing your order, you're welcomed with a H1: "THANK YOU FOR SHOPPING WITH RETRO CLASSICS." underneath , you will find your order information. A confirmation email has been sent to [email address]. The page includes details such as your order summary, billing information, and the delivery address. This confirmation ensures you have all the necessary information for your purchase. Below your order innformation there is a button called Check Out Our Sale!.
+![Checkout Success](./media/readme/features/basket/checkout_success.png)
+
 ## Register
 
 The Register page presents a simple form for users to create an account. The form includes fields for email, username, and password.
@@ -377,6 +385,18 @@ The Sign Out page presents a paragrapgh asking users "Are you sure you want to s
 
 The Password Reset page presents a paragrapgh asking users "Forgotten your password? Enter your e-mail address below, and we'll send you an e-mail allowing you to reset it." with a button for resetting your password.
 ![Sign Out](./media/readme/features/profile/password-reset.png)
+
+## Back To Top Button
+
+I have added a Back To Top Button which is present on every page.
+
+![Back To Top Button](./media/readme/features/btt-btn.png)
+
+## Toasts
+
+I have added Bootstraps toasts for informative notifications throughout the project.
+
+![Toasts](./media/readme/features/toasts.png)
 
 ### Future Features
 
@@ -507,7 +527,6 @@ os.environ['CLOUDINARY_URL'] = 'Your_Cloudinary_url'
 6. **Monitor deployment progress:**
    * *After a while, your app should be deployed. You can check the progress in the Heroku dashboard.*
 
-
 ## Local Deployment
 
 ### How to Fork
@@ -527,7 +546,6 @@ os.environ['CLOUDINARY_URL'] = 'Your_Cloudinary_url'
 3. *Click on the **code button**, select whether you would like to clone with **HTTPS**, **SSH** or **GitHub CLI** and copy the link shown.*
 4. *Open the **terminal** in your **code editor** and change the current **working directory** to the location you want to use for the **cloned directory.***
 5. *Type **'git clone'** into the **terminal** and then **paste** the link you copied in step 3. **Press enter**.*
-
 
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
