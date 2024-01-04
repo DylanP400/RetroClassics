@@ -402,6 +402,8 @@ I have added Bootstraps toasts for informative notifications throughout the proj
 
 ## Testing
 
+Testing results are in [TESTING.md](TESTING.md).
+
 ## Technologies Used
 
 ## Deployment
