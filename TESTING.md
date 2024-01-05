@@ -73,6 +73,21 @@
 | Accessories > All Accessories Link | Clicking on the All Accessories link | Navigates to the All Accessories products page | Pass | Pass |
 | Free Delivery Banner | Free delivery for orders over €100 is displayed in the banner | | Pass | Pass |
 
+### Footer
+
+| Feature | User Action | Expected Result | Desktop Pass/Fail | Mobile Pass/Fail
+| :---| :---| :---| :---| :---|
+| Newsletter Email address | The user can type their email into the sign up box | Allows the user to type their email | Pass | Pass |
+| Newsletter subscribe Button | Clicking the subscribe button | Subscribes to the newsletter | Pass | Pass |
+| Opening Times | | The opening times are displayed | Pass | Pass |
+| Search Box Button | Clicking the search button | Navigates to the user to their search query | Pass | Pass |
+| Facebook Icon | Clicking on the Facebook icon | Opens Facebook.com | Pass | Pass |
+| Twitter(X) Icon | Clicking on the Twitter(X) icon | Opens Twitter.com | Pass | Pass |
+| Linkedin Icon | Clicking on the Linkedin icon | Opens my Linkedin profile | Pass | Pass |
+| Github Icon | Clicking on the Github icon | Opens the Retro Classics repository | Pass | Pass |
+| Phone number link | Clicking on Retro Classics phone number | Asks the user to make a call with their chosen application | Pass | Pass |
+| Email Address link | Clicking on Retro Classics email address | Asks the user to open mail or gmail for sending an email | Pass | Pass |
+
 
 ## Validation
 
