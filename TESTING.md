@@ -357,3 +357,26 @@ For testing the python files I used [Code Institutes CI Python Linter](https://p
 ### Custom_storages.py
 
 * ![Custom_storages.py](./media/testing/validation/python/custom_storages.py.png)
+
+## Javascript Validation
+
+<details>
+<summary>checkout-stripe_elements.js</summary>
+
+* ![checkout-stripe_elements.js](./media/testing/validation//js/checkout-stripe_elements.js.png)
+
+</details>
+
+<details>
+<summary>main-nav.js</summary>
+
+* ![main-nav.js](./media/testing/validation//js/main-nav.js.png)
+
+</details>
+
+<details>
+<summary>profiles-country_field.js</summary>
+
+* ![profiles-country_field.js](./media/testing/validation//js/profiles-country_field.js.png)
+
+</details>
