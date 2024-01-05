@@ -2,9 +2,15 @@
 
 * [validation](#validation)
 
-    * [HTML Validation](#html-validation)
+    * [HTML](#html-validation)
 
-    * [CSS Validation](#css-validation)
+    * [CSS](#css-validation)
+
+    * [Python](#python-validation)
+
+    * [Javascript](#javascript-validation)
+
+* [Lighthouse](#lighthouse)
 
 # Validation
 
@@ -377,6 +383,177 @@ For testing the python files I used [Code Institutes CI Python Linter](https://p
 <details>
 <summary>profiles-country_field.js</summary>
 
-* ![profiles-country_field.js](./media/testing/validation//js/profiles-country_field.js.png)
+* ![profiles-country_field.js](./media/testing/validation/js/profiles-country_field.js.png)
+
+</details>
+
+## Lighthouse
+
+<details>
+<summary>Home page</summary>
+
+* Desktop
+
+  * ![Home page desktop](./media/testing/lighthouse/home-desktop.png)
+
+* Mobile
+
+  * ![Home page mobile](./media/testing/lighthouse/home-mobile.png)
+
+</details>
+
+<details>
+<summary>All Products</summary>
+
+* Desktop
+
+  * ![all products desktop](./media/testing/lighthouse/all-products-desktop.png)
+
+* Mobile
+
+  * ![all products mobile](./media/testing/lighthouse/all-products-mobile.png)
+
+</details>
+
+<details>
+<summary>Product Detail</summary>
+
+* Desktop
+
+  * ![Product Detail desktop](./media/testing/lighthouse/product-detail-desktop.png)
+
+* Mobile
+
+  * ![Product Detail mobile](./media/testing/lighthouse/product-detail-mobile.png)
+
+</details>
+
+<details>
+<summary>Add Product</summary>
+
+* Desktop
+
+  * ![Add Product desktop](./media/testing/lighthouse/add-product-desktop.png)
+
+* Mobile
+
+  * ![Add Product mobile](./media/testing/lighthouse/add-product-mobile.png)
+
+</details>
+
+<details>
+<summary>Edit Product</summary>
+
+* Desktop
+
+  * ![Edit Product desktop](./media/testing/lighthouse/edit-product-desktop.png)
+
+* Mobile
+
+  * ![Edit Product mobile](./media/testing/lighthouse/edit-product-mobile.png)
+
+</details>
+
+<details>
+<summary>Profile</summary>
+
+* Desktop
+
+  * ![Profile desktop](./media/testing/lighthouse/profile-mobile.png)
+
+* Mobile
+
+  * ![Profile mobile](./media/testing/lighthouse/profile-mobile.png)
+
+</details>
+
+<details>
+<summary>Bag</summary>
+
+* Desktop
+
+  * ![Bag desktop](./media/testing/lighthouse/bag-desktop.png)
+
+* Mobile
+
+  * ![Bag mobile](./media/testing/lighthouse/bag-mobile.png)
+
+</details>
+
+<details>
+<summary>Checkout</summary>
+
+* Desktop
+
+  * ![Checkout desktop](./media/testing/lighthouse/checkout-desktop.png)
+
+* Mobile
+
+  * ![Checkout mobile](./media/testing/lighthouse/checkout-mobile.png)
+
+</details>
+
+<details>
+<summary>Checkout Success</summary>
+
+* Desktop
+
+  * ![Checkout Success desktop](./media/testing/lighthouse/checkout-success-desktop.png)
+
+* Mobile
+
+  * ![Checkout Success mobile](./media/testing/lighthouse/checkout-success-mobile.png)
+
+</details>
+
+<details>
+<summary>Register</summary>
+
+* Desktop
+
+  * ![Register desktop](./media/testing/lighthouse/sign-up-desktop.png)
+
+* Mobile
+
+  * ![Register mobile](./media/testing/lighthouse/sign-up-mobile.png)
+
+</details>
+
+<details>
+<summary>Sign In</summary>
+
+* Desktop
+
+  * ![Sign In desktop](./media/testing/lighthouse/signin-desktop.png)
+
+* Mobile
+
+  * ![Sign In mobile](./media/testing/lighthouse/signin-mobile.png)
+
+</details>
+
+<details>
+<summary>Logout</summary>
+
+* Desktop
+
+  * ![Logout desktop](./media/testing/lighthouse/sign-out-desktop.png)
+
+* Mobile
+
+  * ![Logout mobile](./media/testing/lighthouse/signout-mobile.png)
+
+</details>
+
+<details>
+<summary>Password Reset</summary>
+
+* Desktop
+
+  * ![Password Reset desktop](./media/testing/lighthouse/password-reset-desktop.png)
+
+* Mobile
+
+  * ![Password Reset mobile](./media/testing/lighthouse/password-reset-mobile.png)
 
 </details>
