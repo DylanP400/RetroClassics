@@ -17,10 +17,8 @@ import cloudinary_storage
 if os.path.isfile('env.py'):
     import env
 
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
@@ -31,9 +29,6 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = 'DEVELOPMENT' in os.environ
 DEBUG = False
-
-# Debug commented out because it gave a bad request 400 error and server would not start.
-
 
 ALLOWED_HOSTS = ['8000-dylanp400-retroclassics-lhapwo8bmm9.ws-eu107.gitpod.io', 'retro-classics-c87d5f7b23d0.herokuapp.com']
 
@@ -62,8 +57,6 @@ INSTALLED_APPS = [
     'crispy_forms',
     'storages',
     'cloudinary',
-
-
 ]
 
 MIDDLEWARE = [
@@ -131,7 +124,6 @@ LOGIN_REDIRECT_URL = '/'
 
 WSGI_APPLICATION = 'retro_classics.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
@@ -139,7 +131,6 @@ WSGI_APPLICATION = 'retro_classics.wsgi.application'
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
-
 
 # DATABASES = {
 #     'default': {
@@ -166,7 +157,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
@@ -179,9 +169,6 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
-
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
@@ -197,7 +184,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
-
 
 CLOUDINARY_URL = os.environ.get('CLOUDINARY_URL')
 
