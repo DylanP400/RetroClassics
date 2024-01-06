@@ -173,10 +173,72 @@
 
 ### Checkout
 
+| Feature | User Action | Expected Result | Desktop Pass/Fail | Mobile Pass/Fail
+| :---| :---| :---| :---| :---|
+| Full Name Text Area | The user clicks into the text area | The user can type their full name | Pass | Pass |
+| Email Address Text Area | The user clicks into the text area | The user can type their email address | Pass | Pass |
+| Phone Number Text Area | The user clicks into the text area | The user can type their phone number | Pass | Pass |
+| Street Address 1 Text Area | The user clicks into the text area | The user can type their Street Address | Pass | Pass |
+| Street Address 2 Text Area | The user clicks into the text area | The user can type their Street Address | Pass | Pass |
+| Town Or City Text Area | The user clicks into the text area | The user can type their Town or City | Pass | Pass |
+| County or State Text Area | The user clicks into the text area | The user can type their County or State | Pass | Pass |
+| Eircode Text Area | The user clicks into the text area | The user can type their Eircode | Pass | Pass |
+| Country Text Area | The user clicks into the text area | The user can type their Country | Pass | Pass |
+| Create An Account Link | The user clicks the link | The user is redirected to the register page | Pass | Pass |
+| Login Link | The user clicks the link | The user is redirected to the login page | Pass | Pass |
+| Save This Information To My Profile Checkbox | The user clicks the checkbox | The user delivery information is saved | Pass | Pass |
+| Credit Card Text Area | The user clicks the text area | The user is able to type in a valid card | Pass | Pass |
+| Adjust Bag button | The user clicks the button | The user is redirected back to their basket  | Pass | Pass |
+| Complete Order Button | The user clicks the button | The order is processed and the user is rediredcted to the checkout success page | Pass | Pass |
 
+### Checkout success
 
+| Feature | User Action | Expected Result | Desktop Pass/Fail | Mobile Pass/Fail
+| :---| :---| :---| :---| :---|
+| Order Info || Order information is displayed | Pass | Pass |
+| Delivery Info || Delivery information is displayed | Pass | Pass |
+| Checkout Our Sale Button | The user clicks the button | The user navigates to the products on sale | Pass | Pass |
 
+### Register Page
 
+| Feature | User Action | Expected Result | Desktop Pass/Fail | Mobile Pass/Fail
+| :---| :---| :---| :---| :---|
+| Account registration form | The user fills out the form to create an account | An account is created for the user | Pass | Pass |
+| | The user trys to create an account with a username that is already registered | An error pops up in red telling the user "A user with that username already exists" | Pass | Pass |
+| |  If the user trys to sign up with an email already registered | The user is unable to create an account and has to pick a email that is not already registered | Pass | Pass |
+| Sign up button | The user clicks the sign up button to create an account | The users account is created and they are logged in and redirected to the home page | Pass | Pass |
+| Already have an account? Sign in | When the user already has an account and click the sign in link | The user is redirected to the login page | Pass | Pass |
+
+### Login Page
+
+| Feature | User Action | Expected Result | Desktop Pass/Fail | Mobile Pass/Fail
+| :---| :---| :---| :---| :---|
+| Login form | The user trys to login with an account that doesnt exist or with the wrong password | An error message pops up telling the user to "The username and/or password you specified are not correct." | Pass | Pass |
+| Sign In button | The user click enters there login information and clicks Login | The user is logged in and redirected to the home page | Pass | Pass |
+| Create An Account? Sign up link | The user doesnt have an account and clicks sign up | The user is redirected to the Register page | Pass | Pass |
+| Rememeber Me Checkbox | The user clicks the check box | The user login information is saved | Pass | Pass |
+| Forgot Password? Link | The user doesnt cannot rememeber their password and clicks forgot password? | The user is redirected to the password reset page | Pass | Pass |
+
+### Profile
+
+| Feature | User Action | Expected Result | Desktop Pass/Fail | Mobile Pass/Fail
+| :---| :---| :---| :---| :---|
+| Phone Number Text Area | The user clicks into the text area | The user can update their phone number | Pass | Pass |
+| Street Address 1 Text Area | The user clicks into the text area | The user can update their Street Address | Pass | Pass |
+| Street Address 2 Text Area | The user clicks into the text area | The user canupdatee their Street Address | Pass | Pass |
+| Town Or City Text Area | The user clicks into the text area | The user can update their Town or City | Pass | Pass |
+| County or State Text Area | The user clicks into the text area | The user can update their County or State | Pass | Pass |
+| Eircode Text Area | The user clicks into the text area | The user can update their Eircode | Pass | Pass |
+| Country Text Area | The user clicks into the text area | The user can update their Country | Pass | Pass |
+| Update Information Button | The user clicks into the button | The user delivery information is updated | Pass | Pass |
+| Order History | | The users order history is displayed | Pass | Pass |
+| Order Number Link | The user click the link | The user is redirected to the preivous order | Pass | Pass |
+
+### Logout Page
+
+| Feature | User Action | Expected Result | Desktop Pass/Fail | Mobile Pass/Fail
+| :---| :---| :---| :---| :---|
+| Sign Out Button | The user clicks the button | The user logged out and is redirected to the home page | Pass | Pass
 
 ## Validation
 
