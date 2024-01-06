@@ -69,7 +69,7 @@
 | Accessories Link  | Clicking on the Accessories link | Reveals a dropdown menu in the navigation bar with additional links for Accessories | Pass | Pass |
 | Accessories > Controller Link | Clicking on the Controller link | Navigates to the Controller products page | Pass | Pass |
 | Accessories > Memory Cards Link | Clicking on the Memory Cards link | Navigates to the Memory Cards products page | Pass | Pass |
-| Accessories > Cables & Adapters Link | Clicking on the Cables & Adapters link | Navigates to the Cables & Adapters products page | Pass | Pass |
+| Accessories > Cables & Adapters Link | Clicking on the Cables & Adapters link | Navigates to the Cables & Adapters products page | Fail: Bug | Fail: Bug |
 | Accessories > All Accessories Link | Clicking on the All Accessories link | Navigates to the All Accessories products page | Pass | Pass |
 | Free Delivery Banner | Free delivery for orders over €100 is displayed in the banner | | Pass | Pass |
 
@@ -87,6 +87,95 @@
 | Github Icon | Clicking on the Github icon | Opens the Retro Classics repository | Pass | Pass |
 | Phone number link | Clicking on Retro Classics phone number | Asks the user to make a call with their chosen application | Pass | Pass |
 | Email Address link | Clicking on Retro Classics email address | Asks the user to open mail or gmail for sending an email | Pass | Pass |
+
+### Home Page
+
+| Feature | User Action | Expected Result | Desktop Pass/Fail | Mobile Pass/Fail
+| :---| :---| :---| :---| :---|
+| Shop Now Button | Clicking the shop now button  | Navigates to all products | Pass | Pass |
+| View Product Button | Clicking the view products button  | Navigates to the product clicked on | Pass | Pass |
+
+### All Products
+
+| Feature | User Action | Expected Result | Desktop Pass/Fail | Mobile Pass/Fail
+| :---| :---| :---| :---| :---|
+| Sort box | The user wants to sort the products high or low by price, (high to low or low to high), rating, name, category and players  | Products are displayed according to the selected sorting choice. | Pass | Pass |
+| Product Count Indicator|  | Displays the number of products on the page | Pass | Pass |
+| Product Image | Clicking the product image | Navigates to the product | Pass | Pass |
+| Product Name Link | Clicking the name | Navigates to the product | Pass | Pass |
+| Product Category Link | Clicking the product Category | Navigates to the product category | Pass | Pass |
+| Edit Button | Clicking the edit button | Navigates to the edit product page | Pass | Pass |
+| Delete Button | Clicking the delete button | Deletes the product | Pass | Pass |
+
+### Product Detail
+
+| Feature | User Action | Expected Result | Desktop Pass/Fail | Mobile Pass/Fail
+| :---| :---| :---| :---| :---|
+| Edit Button | Clicking the edit button | Navigates to the edit product page | Pass | Pass |
+| Delete Button | Clicking the delete button | Deletes the product | Pass | Pass |
+| Decrease Quantity | Clicking the decrease button | decreases the quantity of the product | Pass | Pass |
+| Quantity box | Clicking inside the box | Allows the user to move the quantity or and down, or the user can type the chosen quantity | Pass | Pass |
+| Increase Quantity | Clicking the increase button | increase the quantity of the product | Pass | Pass |
+| Add To Basket Button | Clicking the add to basket button | Adds to product to the users basket | Pass | Pass |
+| More Products Button | Clicking the increase button | increase the quantity of the product | Pass | Pass |
+| Check Out Some More (Category) Products Link | Clicking the Link | Navigates to the product category page | Pass | Pass |
+
+### Add Product
+
+| Feature | User Action | Expected Result | Desktop Pass/Fail | Mobile Pass/Fail
+| :---| :---| :---| :---| :---|
+| Category Search Box | Clicking the category | Reveals a dropdown menu  with categorys for the product | Pass | Pass |
+| Name Text Area | Clicking the text area | The site owner is able to add the product name | Pass | Pass |
+| SKU Text Area | Clicking the text area | The site owner is able to add the product SKU | Pass | Pass |
+| Select Image Button | Clicking the button | Allows the site owner to select an image | Pass | Pass |
+| Description Text Area | Clicking the text area | The site owner is able to add the product description | Pass | Pass |
+| Rating Range Selector | Clicking selector | Allows the site owner to add an rating | Pass | Pass |
+| Price Range Selector | Clicking selector | Allows the site owner to add the Price | Pass | Pass |
+| Players Range Selector | Clicking selector | Allows the site owner to add the number of Players | Pass | Pass |
+| On Sale Checkbox | Clicking the check box | Allows the site owner to put the product on sale | Pass | Pass |
+| Cancel Button | Clicking button | Allows the site owner to cancel adding a product | Pass | Pass |
+| Add Product button | Clicking the button | Allows the site owner to add the Product | Pass | Pass |
+
+### Edit Product
+
+| Feature | User Action | Expected Result | Desktop Pass/Fail | Mobile Pass/Fail
+| :---| :---| :---| :---| :---|
+| Category Search Box | Clicking the category | Reveals a dropdown menu  with categorys for the product | Pass | Pass |
+| Name Text Area | The User Click the text area | The site owner is able to update the product name | Pass | Pass |
+| SKU Text Area | Clicking the text area | The site owner is able to update a product SKU | Pass | Pass |
+| Product Image | Clicking the image | Enlarges the image | Pass | Pass |
+| Remove Image Check Box | Clicking the remove check box | Removes the image | Pass | Pass |
+| Select Image Button | Clicking the button | Allows the site owner to select an image | Pass | Pass |
+| Description Text Area | Clicking the text area | The site owner is able to update the product description | Pass | Pass |
+| Rating Range Selector | Clicking selector | Allows the site owner to update the rating | Pass | Pass |
+| Price Range Selector | Clicking selector | Allows the site owner to update the Price | Pass | Pass |
+| Players Range Selector | Clicking selector | Allows the site owner to update the Players | Pass | Pass |
+| On Sale Checkbox | Clicking the check box | Allows the site owner to put the product on sale or remove it from being on sale | Pass | Pass |
+| Cancel Button | Clicking button | Allows the site owner to cancel editing the product | Pass | Pass |
+| Update Product button | Clicking the button | Allows the site owner to update the Product | Pass | Pass |
+
+### Bag
+
+| Feature | User Action | Expected Result | Desktop Pass/Fail | Mobile Pass/Fail
+| :---| :---| :---| :---| :---|
+| Decrease Quantity | Clicking the decrease button | decreases the quantity of the product | Pass | Pass |
+| Quantity box | Clicking inside the box | Allows the user to move the quantity or and down, or the user can type the chosen quantity | Pass | Pass |
+| Increase Quantity | Clicking the increase button | increase the quantity of the product | Pass | Pass |
+| Update Link | Clicking the Link | Update the quantity of the product | Pass | Pass |
+| Remove Link | Clicking the Link | Remove the product | Pass | Pass |
+| Discount Box & Button | Entering a discount code | Adds discount to grand total | Fail: Future Feature | Fail: Future Feature |
+| Total Price |  | The Total Price is displayed to the user | Pass | Pass |
+| Delivery Price |  | The Delivery Price is displayed to the user | Pass | Pass |
+| Free Delivery Pop Up | Pops up if under free delivery threshold | Notifes the user how close they are to qualifying for free delivery | Pass | Pass |
+| Grand Total |  | The Grand Total is displayed to the user | Pass | Pass |
+| Continue Shopping Button  | Clicking the button | Redirects the user to more products | Pass | Pass |
+| Checkout Button | Clicking the button | Navigates the user to secure checkout | Pass | Pass |
+
+### Checkout
+
+
+
+
 
 
 ## Validation
