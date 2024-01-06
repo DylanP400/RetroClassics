@@ -14,6 +14,8 @@
 
 * [Lighthouse](#lighthouse)
 
+* [Responsiveness](#responsiveness)
+
 ## Manual Testing
 
 ### Header
@@ -240,6 +242,8 @@
 | :---| :---| :---| :---| :---|
 | Sign Out Button | The user clicks the button | The user logged out and is redirected to the home page | Pass | Pass
 
+[Back to top](#testing)
+
 ## Validation
 
 ### HTML Validation
@@ -284,7 +288,7 @@ For testing the **HTML** files I used [W3C Validator](https://validator.w3.org/)
 <details>
 <summary>Bag</summary>
 
-* ![Bag] Update 
+* ![Bag] Update
 
 </details>
 
@@ -354,12 +358,13 @@ For testing the **CSS** files I used [W3C Jigsaw](https://jigsaw.w3.org/css-vali
 
 </details>
 
+[Back to top](#testing)
+
 ## Python Validation
 
 For testing the python files I used [Code Institutes CI Python Linter](https://pep8ci.herokuapp.com/)
 
 ### bag app
-
 
 <details>
 <summary>bag_tools.py</summary>
@@ -785,3 +790,41 @@ For testing the python files I used [Code Institutes CI Python Linter](https://p
   * ![Password Reset mobile](./media/testing/lighthouse/password-reset-mobile.png)
 
 </details>
+
+## Responsiveness
+
+I tested through all these devices with [Responsive Design Checker](https://responsivedesignchecker.com/)
+
+### Desktop
+
+| Screen Size | Pass/Fail |
+| :---| :---|
+| 32" | Pass |
+| 24" | Pass |
+| 22" | Pass |
+| 20" | Pass |
+| 15" | Pass |
+| 13" | Pass |
+| 10" | Pass |
+
+### Mobile
+
+| Device | Pass/Fail |
+| :---| :---|
+| Apple iPhone 3/4/4s | Pass |
+| Apple iphone 6/6s/7 | Pass |
+| Samsung Galaxy S5/S6/S7 | Pass |
+| Nexus 4 | Pass |
+| Google Pixel | Pass |
+
+### Browsers
+
+| Browser | Pass/Fail |
+| :---| :---|
+| Chrome | Pass |
+| Fire Fox | Pass |
+| Safari | Pass |
+| Edge | Pass |
+| Opera | Pass |
+
+[Back to top](#testing)
