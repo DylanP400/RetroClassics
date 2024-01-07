@@ -59,6 +59,13 @@ p {
     border: 3px solid #054a91 !important;
 }
 
+.blue-btn {
+    background-color: #3e7cb1;
+    color: white;
+    border: 2px solid white;
+
+}
+
 .text-black {
     color: black;
 }
@@ -181,11 +188,6 @@ header {
     padding-top: 50px;
 }
 
-/* font sizes
-3.125rem = 50px
-1.875rem = 30px
-*/
-
 .callout-head {
     font-size: 3.125rem;
 }
@@ -255,13 +257,6 @@ header {
     font-size: 19px;
     font-family: 'Roboto Slab', serif;
     margin-right: 3px;
-}
-
-.buy-btn {
-    background-color: #3e7cb1;
-    color: white;
-    border: 2px solid white;
-
 }
 
 .btn-outline-light:hover {
