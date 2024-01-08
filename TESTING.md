@@ -274,21 +274,25 @@ For testing the **HTML** files I used [W3C Validator](https://validator.w3.org/)
 <details>
 <summary>Add Product</summary>
 
-* ![Add Product] Needs updating
+* The Add Products has one duplicate attribute id error I have not been able to locate this error. The same error is repeated below in edit products
+  
+  * ![Add Product](./media/testing/validation/edit-product.png)
 
 </details>
 
 <details>
 <summary>Edit Product</summary>
 
-* ![Edit Products] Needs updating
+* The Edit Products has one duplicate attribute id error I have not been able to locate this error
+
+  * ![Edit Products](./media/testing/validation/edit-product.png)
 
 </details>
 
 <details>
 <summary>Bag</summary>
 
-* ![Bag] Update
+* ![Bag](./media/testing/validation/html-v.png)
 
 </details>
 
