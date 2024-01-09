@@ -1,6 +1,9 @@
 # Retro Classics
 
 Retro Classics is built using a combination of HTML, CSS, JavaScript, Python, and Django. I have incorporated Cloudinary for efficient image management and Stripe for secure and convenient payment processing.
+![Am I Responsive](./media/readme/am-i-responsive.png)
+
+[Link To Live Website](https://retro-classics-c87d5f7b23d0.herokuapp.com/)
 
 ## Contents
 
@@ -166,7 +169,14 @@ This Kanban board provided a clear visual representation of my project's progres
 
 ### Colour Scheme
 
+Inspired by classic retro games, Retro Classics color palette is a nod to nostalgia. Dark Royal Blue.(#054a91) and Steel Blue are the primary colours, with White for clear text and Yellow for links.
+![Colour Scheme](./media/readme/colour-scheme.png)
+
 ### Typograpghy
+
+* Roboto Slab Regular 400 was used for headings product names.
+
+* Karma Regular 400 was used for everything else.
 
 ### Wireframes
 
@@ -209,6 +219,10 @@ This Kanban board provided a clear visual representation of my project's progres
 ![Sign In](./media/readme/wireframes/wireframe-signin.png)
 </details>
 </details>
+
+### Database Scheme
+
+![Datavase Scheme](./media/readme/Database_diagram.png)
 
 ## Features
 
@@ -397,6 +411,11 @@ I have added a Back To Top Button which is present on every page.
 I have added Bootstraps toasts for informative notifications throughout the project.
 
 ![Toasts](./media/readme/features/toasts.png)
+
+## Facebook Page
+
+![Facebook](./media/readme/Retro-Classics-fb.png)
+![Facebook](./media/readme/Retro-Classics-fb-2.png)
 
 ### Future Features
 
