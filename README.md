@@ -414,6 +414,7 @@ I have added Bootstraps toasts for informative notifications throughout the proj
 
 ## Facebook Page
 
+I have made the decision to not link my project to the facebook page as ther facebbok page will be deleted over not being mantained or real
 ![Facebook](./media/readme/Retro-Classics-fb.png)
 ![Facebook](./media/readme/Retro-Classics-fb-2.png)
 
@@ -425,11 +426,56 @@ Testing results are in [TESTING.md](TESTING.md).
 
 ## Technologies Used
 
+## Frameworks, Libraries & Programs Used
+
+* [Git](https://git-scm.com/) - For version Control.
+
+* [Github](https://github.com/) - Used to save and store the files for the website.
+
+* [Gitpod](https://www.gitpod.io/) - Was used to created my code.
+
+* [Google Dev Tools](https://developer.chrome.com/docs/devtools/) - To troubleshoot and test features, solve issues with responsiveness and styling.
+
+* [AM I Responsive?](https://amiresponsive.co.uk/) - Used to show the Website image on a range of devices.
+
+* [Responsive Design Checker](https://responsivedesignchecker.com/) - For checking the responsiveness across mulitiple devices and screen widths
+
+* [Favicon](https://www.favicon-generator.org/) - Used to make a Favicon for the website.
+
+* [Favicon Generator](https://www.favicon-generator.org/) - Was
+ used to make the favicon.
+
+* [HTML Validator](https://validator.w3.org/) - For HTML validation.
+
+* [Python validator](https://pep8ci.herokuapp.com/) - For Python validation.
+
+* [W3 Jigsaw](https://jigsaw.w3.org/css-validator/) - For CSS validation.
+
+* [Bootstrap4](https://getbootstrap.com/docs/4.6/getting-started/introduction/) - CSS Framework.
+
+* [Django3](https://docs.djangoproject.com/en/4.2/) - Python Framework.
+
+* [Cloudinary](https://cloudinary.com/) - For hosting Inked Clippers images.
+
+* [Django Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/) - Enhanced form rendering for Django.
+
+* [psycopg2](https://pypi.org/project/psycopg2/) - PostgreSQL adapter for Python.
+
+* [Gunicorn](https://gunicorn.org/) - A Python HTTP server for running web applications.
+
+* [sqlparse](https://pypi.org/project/sqlparse/) - A Python library for parsing and formatting SQL queries.
+
+* [Figma](https://www.figma.com/) - Used for creating wireframes.
+
+* [Stripe](https://stripe.com/) - Used for proccesing payments.
+
+* [Django Pillow](https://pypi.org/project/pillow/) - A Python Imaging Library (PIL) for Django, used for handling image files in Django applications.
+
 ## Deployment
 
 ### ElephantSQL Database Setup
 
-**Step 1: Obtain ElephantSQL Database URL**
+* **Step 1: Obtain ElephantSQL Database URL**
 
 1. **Sign up or sign in to ElephantSQL:**
 
@@ -560,7 +606,7 @@ os.environ['CLOUDINARY_URL'] = 'Your_Cloudinary_url'
 
 ### How to clone
 
-**To clone the repository**
+* **To clone the repository**
 
 1. *Log in to **GitHub.***
 2. *Go to the **repository** for this project, [DylanP400/RetroClassics](https://github.com/DylanP400/RetroClassics)*
