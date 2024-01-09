@@ -39,7 +39,7 @@
                                     <p class="my-0 small text-yellow">SKU: {{ item.product.sku|upper }}</p>
                                     <p class="my-0 d-block d-sm-none text-yellow">€{{ item.product.price }}</p>
                                 </td>
-                                <td class="p-md-3 w-md-25">
+                                <td class="p-md-3">
                                     {% if item.product.image %}
                                     <img class="w-100 img-custom rounded" alt="{{ item.product.name }}"
                                         src="{{ item.product.image.url }}" aria-label="Product image">
@@ -48,7 +48,7 @@
                                         src="{{ MEDIA_URL }}noimage.png">
                                 </td>
                                 {% endif %}
-                                <td class="py-3 w-25">
+                                <td class="py-3">
                                     <form class="form update-form" method="POST"
                                         action="{% url 'update_bag' item.item_id %}">
                                         {% csrf_token %}
@@ -78,8 +78,8 @@
                                             </div>
                                         </div>
                                     </form>
-                                    <a class="update-link green float-sm-left text-center"><small>Update</small></a>
-                                    <a class="remove-item text-red float-sm-right text-center"
+                                    <a class="update-link float-sm-left text-center text-white"><small>Update</small></a>
+                                    <a class="remove-item text-white float-sm-right text-center"
                                         id="remove_{{ item.item_id }}"
                                         data-product_size="{{ item.size }}"><small>Remove</small></a>
                                 </td>

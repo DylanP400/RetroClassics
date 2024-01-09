@@ -73,15 +73,6 @@ p {
     color: #00ff2d !important;
 }
 
-.update-link {
-    color: #00ff2d !important;
-}
-
-.remove-item {
-    border: 2px solid red;
-    background-color: red;
-}
-
 .bg-green {
     background-color: green;
 }
@@ -335,6 +326,19 @@ header {
     background-color: #054a91;
 }
 
+.update-link {
+    color: white;
+    background-color: green;
+    border-radius: 50px;
+    padding: 4px;
+}
+
+.remove-item {
+    border: 2px solid red;
+    background-color: red;
+    border-radius: 50px;
+    padding: 2px;
+}
 
 /* ------------------------------------------- Shopping Cart End */
 
@@ -574,7 +578,6 @@ footer {
         border: 2px solid green;
         font-size: 12px;
         padding: 4px;
-
     }
 
     .sm {
@@ -594,7 +597,7 @@ footer {
     }
 
     .opening-times {
-        font-size: 22px;
+        font-size: 15px;
     }
 
     .opening-times h3 {
