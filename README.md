@@ -476,6 +476,36 @@ I have added Bootstraps toasts for informative notifications throughout the proj
 
 ### Future Features
 
+* **Discount Code Functionality:**
+
+  * Wire up the discount code feature to enable users to apply discounts during the checkout process.
+  * Create a system for managing and generating discount codes.
+
+* **Customer Reviews for the Store:**
+
+  * Integrate a review system that allows customers to leave feedback and reviews for products.
+  * Implement a rating system and user comments for each product.
+
+* **Wishlist Functionality:**
+
+  * Add a wishlist feature, allowing users to save products for future consideration.
+  * Provide options for users to manage and share their wishlists.
+
+* **FAQs Page:**
+
+  * Create a Frequently Asked Questions (FAQs) page to address common queries from users.
+  * Organize information in a clear and accessible format for easy reference.
+
+* **Blog:**
+
+  * Integrate a blog section to share updates, news, and relevant content.
+  * Allow for easy creation and management of blog posts, including categories and tags.
+
+* **Order Confirmation Emails:**
+
+  * Configure the system to automatically send order confirmation emails to users when a product is ordered.
+  * Ensure that users receive timely and detailed information about their purchases, creating a positive post-purchase experience.
+
 ## Testing
 
 Testing results are in [TESTING.md](TESTING.md).
