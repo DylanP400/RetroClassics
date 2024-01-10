@@ -15,7 +15,11 @@ Retro Classics is built using a combination of HTML, CSS, JavaScript, Python, an
 
   * [Initial Discussion](#initial-discussion)
 
-  * [Agile Methodology](#agile-methodology)
+* [Agile Methodology](#agile-methodology)
+
+* [Business Model](#business-model)
+
+* [SEO](#seo)
 
 * [Design](#design)
 
@@ -32,6 +36,8 @@ Retro Classics is built using a combination of HTML, CSS, JavaScript, Python, an
   * [Future Features](#future-features)
 
 * [Testing](#testing)
+
+* [Bugs](#bugs)
 
 * [Technologies Used](#technologies-used)
 
@@ -163,7 +169,63 @@ This Kanban board provided a clear visual representation of my project's progres
 
 [Back to top](#retro-classics)
 
-### Initial Discussion
+## Business Model
+
+### Executive Summary
+
+Retro Classics in an online store that is dedicated to taking all gamer lovers on an exciting venture of nostalgic joy with a one stop shop for all retro games and consoles. We offer a thoughtfully curated selection of classic gaming consoles and timeless games bringing gamers
+on a journey back in time through a seamless and engaging online shopping experience.
+
+### Mission and Vision
+
+Our mission is to revive the magic of retro gaming allowing individuals to relive cherished memories and rediscover the timeless allure of iconic consoles and games. We envision becoming the go-to destination for all gamers seeking a trip down memory - lane, offering a diverse range of authentic retro gaming experiences.
+
+### Target Market
+
+Our target audience includes passionate gamers, collectors and individuals seeking a nostalgic trip in to a world of retro-gaming. With a focus on quality, authenticity, and a love for the classics, we cater to a diverse customer base spanning various age groups.
+
+### Marketing and Sales Strategy
+
+Retro Classics strategy aims to create customer awareness and increase sales with promotional campaigns such as online advertising, social media marketing, email campaigns and digital mail.
+The business will use Search Engine Optimization (SEO) strategy, and targeted digital media advertisements to drive traffic to the website.
+
+### Operations and Management
+
+* Retro classics will operate as an e-commerce platform specialising in the sale of retro gaming consoles and classic game titles. All operations will be conducted online, providing customers with a seamless and user friendly shopping experience.
+
+* Retro Classics will regularly update and maintain the website to ensure optimal performance, security, and user experience and offer multi-channel customer support (live chat, email, and phone) to address inquiries and resolve issues promptly.
+
+* Retro Classics will maintain a meticulously curated inventory of authentic retro gaming consoles and games and establish strategic partnerships with reliable suppliers and distributors for retro gaming products.
+
+* Retro classics will prioritize quality control measures for all products through thorough testing and inspections to guarantee the authenticity and functionality of all retro gaming consoles and games.
+
+## SEO
+
+### Keywords
+
+**Short Tail:** *Retro, Games, Gaming, Retro Gaming,
+PS1, PS2, PSP, Playstation, Nintendo, SNES, Gamecube, Gameboy, GBA, SEGA*
+
+**Long Tail:** *Sega Genesis, Retro Console, Retro Classics, 8bit gaming,
+16bit gaming, Playstation One, Playstation Two,
+Playstation Portable, Nintendo SNES, Nintendo Gamecube,
+Nintendo 64, Gameboy Advanced*
+
+### Robots.txt
+
+A robots.txt file has been generated. To streamline Google's crawling process, I've strategically blocked the profiles and bag app. This decision was made because these specific pages don't provide significant benefits for search engine indexing. By excluding them, I aim to optimize the crawling efficiency for the rest of the website.
+
+### Sitemap.Xml
+
+I've developed a sitemap.xml for the website to enhance its search engine visibility, particularly for platforms like Google. This file aids in the effective indexing of the site, making it easier for search engines to navigate and understand its structure.
+
+### Facebook Business Page
+
+[Link To Facebook Page](https://www.facebook.com/profile.php?id=61555295675337)
+
+I have made the decision to not link my project to the facebook page as the Facebook page will be deleted over not being maintained or real
+![Facebook](./media/readme/Retro-Classics-fb.png)
+![Facebook](./media/readme/Retro-Classics-fb-2.png)
 
 ## Design
 
@@ -412,17 +474,14 @@ I have added Bootstraps toasts for informative notifications throughout the proj
 
 ![Toasts](./media/readme/features/toasts.png)
 
-## Facebook Page
-
-I have made the decision to not link my project to the facebook page as ther facebbok page will be deleted over not being mantained or real
-![Facebook](./media/readme/Retro-Classics-fb.png)
-![Facebook](./media/readme/Retro-Classics-fb-2.png)
-
 ### Future Features
 
 ## Testing
 
 Testing results are in [TESTING.md](TESTING.md).
+
+
+## bugs
 
 ## Technologies Used
 

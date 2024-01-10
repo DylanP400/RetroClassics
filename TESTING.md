@@ -2,7 +2,7 @@
 
 * [Manual Testing](#manual-testing)
 
-* [validation](#validation)
+* [Validation](#validation)
 
   * [HTML](#html-validation)
 
