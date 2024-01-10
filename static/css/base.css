@@ -36,7 +36,6 @@ p {
     height: 2px;
 }
 
-
 /* ------------------------------ Custom colours */
 
 .blue {
@@ -91,6 +90,10 @@ p {
 
 .text-red {
     color: red;
+}
+
+.bg-red {
+    background-color: red;
 }
 
 /* -------------------------------------  Custom Colours End */
@@ -181,7 +184,6 @@ header {
 .callout-p {
     font-size: 1.875rem
 }
-
 
 .shop-now-btn {
     background-color: #054a91;
