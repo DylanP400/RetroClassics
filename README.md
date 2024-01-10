@@ -13,8 +13,6 @@ Retro Classics is built using a combination of HTML, CSS, JavaScript, Python, an
 
   * [Site Goals](#site-goals)
 
-  * [Initial Discussion](#initial-discussion)
-
 * [Agile Methodology](#agile-methodology)
 
 * [Business Model](#business-model)
@@ -48,6 +46,8 @@ Retro Classics is built using a combination of HTML, CSS, JavaScript, Python, an
   * [Heroku](#heroku)
 
   * [Local Deployment](#local-deployment)
+
+* [Credits](#credits)
 
 ## User Experience
 
@@ -396,7 +396,7 @@ The home page of the Retro Classics Store welcomes visitors with a callout invit
 
 ### Testimonials
 
-* The testimonial section just has two reviews left by customers.
+* The testimonial section has two reviews left by customers.
 
 ![Testimonial](./media/readme/features/home-page/testimonials.png)
 
@@ -724,9 +724,28 @@ os.environ['CLOUDINARY_URL'] = 'Your_Cloudinary_url'
 4. *Open the **terminal** in your **code editor** and change the current **working directory** to the location you want to use for the **cloned directory.***
 5. *Type **'git clone'** into the **terminal** and then **paste** the link you copied in step 3. **Press enter**.*
 
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+## Credits
 
-<!-- # Imagery 
-https://pixabay.com/images/search/retro%20gaming/?pagi=2
-https://www.pexels.com/search/video%20game/
-https://www.rawpixel.com/search/Retro%20gaming?page=1&sort=curated&topic_group=_topics -->
+### Code Used
+
+* In developing this project, I leaned on Code Institute's codebase for Boutique Ado as a reference. While building my own project, I encountered challenges, and during those instances, I consulted Boutique Ado's code or revisited relevant tutorial videos. The search function in Slack became a valuable resource for me, allowing me to explore solutions to common issues faced by previous students.
+
+* I watched [Corey Schafer's Django Tutorial](https://www.youtube.com/playlist?list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p) to get a better understanding of Django.
+
+### Imagery
+
+* I sourced the Background Image from [Pexels](https://www.pexels.com/search/video%20game/)
+
+* I sourced the Favicon Image from  [Raw Pexels](https://www.rawpixel.com/search/Retro%20gaming?page=1&sort=curated&topic_group=_topics)
+
+* Acquiring suitable images for the products posed a significant challenge. I resorted to using [Wikipedia](https://www.C.org/) as a source for all product images, leveraging their repository to fulfill the visual requirements of the project.
+
+### Acknowledgments
+
+* I extend my heartfelt thanks to my mentor, Rory, for providing invaluable help and guidance throughout the project.
+
+* A special appreciation to the Tutor support system for their assistance whenever I encountered challenges or uncertainties.
+
+* I extend a special appreciation to the Tutor support system for their invaluable assistance whenever I faced challenges or uncertainties throughout this project. I heavily relied on the tutors, particularly when encountering specific bugs, and their support significantly contributed to overcoming obstacles.
+
+![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
