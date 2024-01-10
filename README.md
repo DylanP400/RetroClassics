@@ -480,8 +480,29 @@ I have added Bootstraps toasts for informative notifications throughout the proj
 
 Testing results are in [TESTING.md](TESTING.md).
 
-
 ## bugs
+
+### Closed bugs
+
+| Bug | Solution |
+| :---| :---|
+| 500 server error on the profile | countryfield.js was in the CSS folder, I moved the file into the JS folder and the error was gone |
+| When attempting to migrate the database using the standard python3 manage.py migrate command, I received a message stating that there are no migrations to apply. I had to use this command ```python3 manage.py dumpdata --exclude auth.permission --exclude contenttypes --exclude checkout --exclude admin --exclude profiles > new.json``` | After inputting the command my database migrated. I spent quite a lot of time solving this bug as I thought the problem was with AWS and that is why I opted to use Cloudinary instead but after deploying my site I dont think I had any AWS problems at all it was the database preventing the deployment |
+
+### Open Bugs
+
+| Bug | Open/Closed |
+| :---| :---|
+| I encountered an issue with the placement of a background image on index.html. I had the background image within the body tag, but it wasn't positioned correctly on the page and I faced problems with the tint applied over the image. In an attempt to resolve this, I experimented with placing the background image around the entire page. However, I encountered issues with sizing—either the image was too large, too small, or not displaying at all. To address this, I decided to place the image within a ```<div>``` element with the class darken-img and the id bg-img. Surprisingly, the image was positioned perfectly with basic CSS styles. However, I noticed that the darken effect on the image had disappeared. To address this, I duplicated the ```<div class="darken-img" id="bg-img">``` and placed it underneath the original one. Strangely, if I removed the bg-img from the class, either the darken effect or the background image would vanish. As a temporary solution, I left the class declared twice to maintain the desired appearance. | Open |
+| In the Nav bar the link for Cables & Adapters loads and empty page I was unable to find the correct url for the webpage I think its the "&" which is causing this problem. | Open |
+| When you click edit on a product a toast pops up telling you that "You updated (Product)" this toast should say you are editing (product) | Open |
+| I have noticed sometimes when I login on mobile I get a 403 error but once I hit back I am brought to the home page and I am logged in I have displayed a screenshot below | Open
+
+<details><summary>403 bug Screenshot</summary>
+
+![Bug](./media/readme/bug.png)
+
+</details>
 
 ## Technologies Used
 
