@@ -23,7 +23,7 @@ Retro Classics is built using a combination of HTML, CSS, JavaScript, Python, an
 
   * [Colour Scheme](#colour-scheme)
 
-  * [typograpghy](#typograpghy)
+  * [Typograpghy](#typograpghy)
 
   * [Wireframes](#wireframes)
 
