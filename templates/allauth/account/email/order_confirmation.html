@@ -6,19 +6,20 @@
 </head>
 <body>
     <h1>Order Confirmation</h1>
-    <p>Dear {{ order.first_name }},</p>
+    <p>Dear {{ order.full_name }},</p>
     <p>Thank you for your order! Your order number is {{ order_number }}.</p>
     <p>Here are the details of your order:</p>
     <ul>
-        {% for item in order.items %}
-            <li>{{ item.product.name }} - Quantity: {{ item.quantity }}</li>
+        {% for line_item in order.lineitems %}
+            <li>{{ line_item.product.name }} - Quantity: {{ line_item.quantity }}</li>
         {% endfor %}
     </ul>
-    <p>Total amount: €{{ order.total }}</p>
+    
+    <p>Total amount: €{{ order.grand_total }}</p>
     <p>Your order will be shipped to:</p>
-    <p>{{ order.shipping_address.full_name }}</p>
-    <p>{{ order.shipping_address.street_address }}</p>
-    <p>{{ order.shipping_address.city }}, {{ order.shipping_address.county }} {{ order.shipping_address.postcode }}</p>
+    <p>{{ order.full_name }}</p>
+    <p>{{ order.street_address }}</p>
+    <p>{{ order.town_or_city }}, {{ order.county }} {{ order.postcode }}</p>
     <p>Thank you for shopping with Retro Classics!</p>
 </body>
 </html>
