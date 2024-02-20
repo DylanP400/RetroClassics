@@ -5,6 +5,11 @@ from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
 
+# For sending emails
+from django.core.mail import send_mail
+from django.template.loader import render_to_string
+from django.utils.html import strip_tags
+
 from .forms import OrderForm
 from .models import Order, OrderLineItem
 from profiles.forms import UserProfileForm
@@ -143,11 +148,13 @@ def checkout_success(request, order_number):
     order = get_object_or_404(Order, order_number=order_number)
 
     if request.user.is_authenticated:
-        profile = UserProfile.objects.get(user=request.user)
-        # Attach the user's profile to the order
-        order.user_profile = profile
-        order.save()
-
+        try:
+            profile = UserProfile.objects.get(user=request.user)
+            # Attach the user's profile to the order
+            order.user_profile = profile
+            order.save()
+        except UserProfile.DoesNotExist:
+            pass
         # Save the user's info
         if save_info:
             profile_data = {
@@ -166,6 +173,18 @@ def checkout_success(request, order_number):
     messages.success(request, f'Order successfully processed! \
         Your order number is {order_number}. A confirmation \
         email will be sent to {order.email}.')
+        
+    subject = 'Order Confirmation'
+    context = {'order_number': order_number}
+    html_message = render_to_string('account/email/order_confirmation.html', context)
+    plain_message = strip_tags(html_message)
+    from_email = settings.DEFAULT_FROM_EMAIL
+    to_email = [order.email]
+
+    try:
+        send_mail(subject, plain_message, from_email, to_email, html_message=html_message)
+    except Exception as e:
+        pass
 
     if 'bag' in request.session:
         del request.session['bag']
