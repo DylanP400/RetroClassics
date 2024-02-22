@@ -12,6 +12,9 @@
     <ul>
         {% for line_item in order.lineitems %}
             <li>{{ line_item.product.name }} - Quantity: {{ line_item.quantity }}</li>
+            <!-- Debug code -->
+            <li>Line item ID: {{ line_item.id }}</li>
+            <li>Line item total: €{{ line_item.lineitem_total }}</li>
         {% endfor %}
     </ul>
     
