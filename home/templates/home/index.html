@@ -66,38 +66,61 @@
     </div>
 </section>
 
-<section class="bg-lt-blu p-0 m-0">
-    <div class="row">
-        <div class="col-12 mt-5">
-            <h2 class="text-uppercase text-center mt-5 text-white robo-font">Testimonials</h2>
-            <hr>
+<section class="bg-lt-blu">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 mt-5">
+                <h2 class="text-uppercase text-center mt-5 text-white robo-font">
+                    Testimonials
+                </h2>
+                <hr>
+           </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-6">
-            <div class="card bg-lt-blu m-3">
-                <div class="card-body border-blue">
-                    <h5 class="card-title text-white robo-font">Dylan Mc Mahon</h5>
-                    <p class="card-text text-white karma-font">Retro Classics is my favourite online store for retro
-                        gaming it has
-                        all the old nintendo games I played when i was a kid.</p>
-                    <small class="text-yellow">Rating: <i class="fa-solid fa-star fa-beat fa-2xs"></i><span>
-                            5</span></small>
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center">
+                <div id="carousel" class="carousel slide">
+                    <div class="carousel-inner">
+                        {% for testimonial in testimonials %}
+                        <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                            <div class="card bg-lt-blu m-3">
+                                <div class="card-body border-blue">
+                                    <h5 class="text-white">Rating: <span class="text-yellow">
+                                            {{ testimonial.rating}} </span><i class="fa-solid fa-star fa-beat fa-2xs text-yellow"> </i>
+                                    </h5>
+                                    <p class="card-text text-white karma-font">{{ testimonial.content }}</p>
+                                    <small class="card-title text-white robo-font">By {{ testimonial.user.username }}</small>  
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-sm-6">
-            <div class="card bg-lt-blu m-3 border-blue">
-                <div class="card-body text-white">
-                    <h5 class="card-title robo-font">Robert O'brien</h5>
-                    <p class="card-text karma-font">I have been shopping with Retro Classics for years. It is my go too
-                        for
-                        Playstation one and two games</p>
-                    <small class="text-yellow">Rating: <i class="fa-solid fa-star fa-beat fa-2xs"></i><span>
-                            5</span></small>
-                </div>
+        <div class="row">
+            <div class="col">
+                <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                    <span class="visually-hidden">Next</span>
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
             </div>
         </div>
     </div>
 </section>
+
+
+
+{% endblock %}
+
+
+{% block extra_js %}
+<script>
+    $(document).ready(function() {
+        $('#carousel').carousel();
+    });
+</script>
 {% endblock %}
