@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.contrib import messages
 from .models import UserProfile
+from testimonials.models import UserTestimonial
 from .forms import UserProfileForm
 from django.contrib.auth.decorators import login_required
 
@@ -23,11 +24,13 @@ def profile(request):
     else:
         form = UserProfileForm(instance=profile)
     orders = profile.orders.all()
+    user_testimonials = UserTestimonial.objects.filter(user=request.user).order_by('-date_created')
 
     template = 'profiles/profile.html'
     context = {
         'form': form,
         'orders': orders,
+        'user_testimonials': user_testimonials,
         'on_profile_page': True
     }
 
