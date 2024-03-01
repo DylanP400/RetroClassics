@@ -186,8 +186,7 @@ def checkout_success(request, order_number):
         'country': order.country,
         'postcode': order.postcode,
         }
-    print(context)
-    print(order)
+    print(order.grand_total)
     html_message = render_to_string('account/email/order_confirmation.html', context)
     plain_message = strip_tags(html_message)
     from_email = settings.DEFAULT_FROM_EMAIL
