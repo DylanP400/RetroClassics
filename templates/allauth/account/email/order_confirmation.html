@@ -10,8 +10,8 @@
     <p>Thank you for your order! Your order number is {{ order_number }}.</p>
     <p>Here are the details of your order:</p>
     <ul>
-        {% for line_item in order.lineitems %}
-            <li>{{ product.name }} - Quantity: {{ quantity }}</li>
+        {% for line_item in order_items %}
+            <li>{{ line_item.product.name }} - Quantity: {{ line_item.quantity }}</li>
         {% endfor %}
     </ul>
     
