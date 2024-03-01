@@ -183,6 +183,7 @@ def checkout_success(request, order_number):
         'street_address': order.street_address1,  
         'town_or_city': order.town_or_city,
         'county': order.county,
+        'country': order.country,
         'postcode': order.postcode,
         }
     print(context)
