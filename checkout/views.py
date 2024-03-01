@@ -175,7 +175,18 @@ def checkout_success(request, order_number):
         email will be sent to {order.email}.')
         
     subject = 'Order Confirmation'
-    context = {'order_number': order_number}
+    context = {
+        'order_number': order_number,
+        'full_name': order.full_name,
+        'order_items': order.lineitems.all(), 
+        'order_grand_total': order.grand_total,
+        'street_address': order.street_address1,  
+        'town_or_city': order.town_or_city,
+        'county': order.county,
+        'postcode': order.postcode,
+        }
+    print(context)
+    print(order)
     html_message = render_to_string('account/email/order_confirmation.html', context)
     plain_message = strip_tags(html_message)
     from_email = settings.DEFAULT_FROM_EMAIL
