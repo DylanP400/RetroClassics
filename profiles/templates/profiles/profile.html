@@ -94,6 +94,14 @@
                             <h5 class="text-white">Rating: <span class="text-yellow">{{ testimonial.rating}} </span><i class="fa-solid fa-star fa-beat fa-2xs text-yellow"></i></h5>
                             <p class="card-text text-white karma-font">{{ testimonial.content }}</p>
                         </div>
+                        {% for user_testimonial in user_testimonials %}
+                        <div class="d-flex justify-content-center">
+                            <p><a href="{% url 'edit_testimonial' user_testimonial.pk %}" class="btn-sm btn-success">Edit</a></p>
+                            <p><a href="{% url 'delete_testimonial' user_testimonial.pk %}"
+                                class="btn-sm btn-danger mb-4">Delete</a></p>
+                                <a href="{% url 'add_testimonial' %}" class="btn bg-blue robo-font text-white p-2 border-blue">Leave a Testimonial</a>
+                            </div>
+                        {% endfor %}
                     </div>
                     {% endfor %}
                 </div>
