@@ -40,7 +40,7 @@
                     </p>
                 </strong>
                 {% if free_delivery_delta > 0 %}
-                <p class="mb-0 p-2 bg-blue shadow-sm text-white text-center">
+                <p class="mb-0 p-2 bg-lt-blu shadow-sm text-white text-center">
                     Spend <strong class="text-yellow">€{{ free_delivery_delta }}</strong> more to get free next day
                     delivery!
                 </p>
@@ -48,7 +48,7 @@
                 <a href="{% url 'view_bag' %}" class="btn btn-block rounded-0 bg-blue border-blue">
                     <span class="text-uppercase text-white">Proceed to Checkout</span>
                     <span class="icon">
-                        <i class="fas fa-lock text-white"></i>
+                        <i class="fas fa-lock text-yellow"></i>
                     </span>
                 </a>
             </div>
