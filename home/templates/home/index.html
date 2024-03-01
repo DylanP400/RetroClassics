@@ -120,7 +120,9 @@
 {% block extra_js %}
 <script>
     $(document).ready(function() {
-        $('#carousel').carousel();
+        $('#carousel').carousel({
+        interval: 5000
+    });
     });
 </script>
 {% endblock %}
