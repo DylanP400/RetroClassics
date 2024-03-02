@@ -423,13 +423,13 @@ The home page of the Retro Classics Store welcomes visitors with a callout invit
 
 ### Testimonials
 
-* The testimonial section has two reviews left by customers.
+* The testimonial section functions as a carousel, allowing users to view testimonials. It includes buttons for navigating to the next and previous testimonials.
 
 <details>
 <summary>Desktop & Mobile View</summary>
 
-* ![Testimonial](./media/readme/features/home-page/testimonials.png)
-* ![Home](./media/readme/features/home-3-mobile.png)
+* ![Testimonial](./media/readme/features/home-page/testimonials-updated.png)
+* ![Home](./media/readme/features/home-page/testimonials-updated-mobile.png)
 
 </details>
 
