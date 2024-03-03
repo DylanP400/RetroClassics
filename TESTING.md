@@ -337,6 +337,27 @@ For testing the **HTML** files I used [W3C Validator](https://validator.w3.org/)
 
 </details>
 
+<details>
+<summary>Add Testimonial</summary>
+
+* ![Add Testimonial](./media/testing/validation/html-v.png)
+
+</details>
+
+<details>
+<summary>Edit Testimonial</summary>
+
+* ![Edit Testimonial](./media/testing/validation/html-v.png)
+
+</details>
+
+<details>
+<summary>Delete Testimonial</summary>
+
+* ![Delete Testimonial](./media/testing/validation/html-v.png)
+
+</details>
+
 ## CSS Validation
 
 For testing the **CSS** files I used [W3C Jigsaw](https://jigsaw.w3.org/css-validator/)
