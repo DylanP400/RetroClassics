@@ -13,7 +13,6 @@ from django.contrib import messages
 from django.contrib.auth.mixins import UserPassesTestMixin
 from django.urls import reverse, reverse_lazy
 
-# Create your views here.
 
 class UserTestimonialsListView(ListView):
     """
@@ -87,5 +86,8 @@ class delete_testimonial(UserPassesTestMixin, DeleteView):
         return self.request.user == testimonial.user
 
     def delete(self, request, *args, **kwargs):
-        messages.success(request, 'You have successfully deleted your testimonial')
+        messages.success(
+            request,
+            'You have successfully deleted your testimonial'
+            )
         return super().delete(request, *args, **kwargs)
