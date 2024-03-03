@@ -21,7 +21,7 @@
 ### Header
 
 | Feature | User Action | Expected Result | Desktop Pass/Fail | Mobile Pass/Fail
-| :---| :---| :---| :---| :---|
+| :---| :---| :---| :---|
 | Logo | Clicking on the Retro Classics Logo | Redirects to the Home page | Pass | Pass |
 | Search Box | Clicking into the search box | Allows the user to type their search query and search the store. | Pass | Pass |
 | Search Box Button | Clicking the search button | Navigates to the user to their search query | Pass | Pass |
@@ -37,7 +37,7 @@
 ### Navbar
 
 | Feature | User Action | Expected Result | Desktop Pass/Fail | Mobile Pass/Fail
-| :---| :---| :---| :---| :---|
+| :---| :---| :---| :---|
 | All Products Link | Clicking on the All Products link | Reveals a dropdown menu in the navigation bar with additional links. | Pass | Pass |
 | All Products > On Sale! Link | Clicking on the On Sale! link | Navigates to the products on sale | Pass | Pass |
 | All Products > By Price Link | Clicking on the By Price link | Sorts all products by lowest price | Pass | Pass |
@@ -78,7 +78,7 @@
 ### Footer
 
 | Feature | User Action | Expected Result | Desktop Pass/Fail | Mobile Pass/Fail
-| :---| :---| :---| :---| :---|
+| :---| :---| :---| :---|
 | Newsletter Email address | The user can type their email into the sign up box | Allows the user to type their email | Pass | Pass |
 | Newsletter subscribe Button | Clicking the subscribe button | Subscribes to the newsletter | Pass | Pass |
 | Opening Times | | The opening times are displayed | Pass | Pass |
@@ -93,14 +93,14 @@
 ### Home Page
 
 | Feature | User Action | Expected Result | Desktop Pass/Fail | Mobile Pass/Fail
-| :---| :---| :---| :---| :---|
+| :---| :---| :---| :---|
 | Shop Now Button | Clicking the shop now button  | Navigates to all products | Pass | Pass |
 | View Product Button | Clicking the view products button  | Navigates to the product clicked on | Pass | Pass |
 
 ### All Products
 
 | Feature | User Action | Expected Result | Desktop Pass/Fail | Mobile Pass/Fail
-| :---| :---| :---| :---| :---|
+| :---| :---| :---| :---|
 | Sort box | The user wants to sort the products high or low by price, (high to low or low to high), rating, name, category and players  | Products are displayed according to the selected sorting choice. | Pass | Pass |
 | Product Count Indicator|  | Displays the number of products on the page | Pass | Pass |
 | Product Image | Clicking the product image | Navigates to the product | Pass | Pass |
@@ -112,7 +112,7 @@
 ### Product Detail
 
 | Feature | User Action | Expected Result | Desktop Pass/Fail | Mobile Pass/Fail
-| :---| :---| :---| :---| :---|
+| :---| :---| :---| :---|
 | Edit Button | Clicking the edit button | Navigates to the edit product page | Pass | Pass |
 | Delete Button | Clicking the delete button | Deletes the product | Pass | Pass |
 | Decrease Quantity | Clicking the decrease button | decreases the quantity of the product | Pass | Pass |
@@ -125,7 +125,7 @@
 ### Add Product
 
 | Feature | User Action | Expected Result | Desktop Pass/Fail | Mobile Pass/Fail
-| :---| :---| :---| :---| :---|
+| :---| :---| :---| :---|
 | Category Search Box | Clicking the category | Reveals a dropdown menu  with categorys for the product | Pass | Pass |
 | Name Text Area | Clicking the text area | The site owner is able to add the product name | Pass | Pass |
 | SKU Text Area | Clicking the text area | The site owner is able to add the product SKU | Pass | Pass |
@@ -611,10 +611,33 @@ For testing the python files I used [Code Institutes CI Python Linter](https://p
 
 </details>
 
+### testimonials app
+
 <details>
 <summary>views.py</summary>
 
-* ![views.py](./media/testing/validation/python/retro_classics/rc-views.py.png)
+* ![views.py](./media/testing/validation/python/testimonials/t-views.py.png)
+
+</details>
+
+<details>
+<summary>urls.py</summary>
+
+* ![urls.py](./media/testing/validation/python/testimonials/t-urls.py.png)
+
+</details>
+
+<details>
+<summary>models.py</summary>
+
+* ![models.py](./media/testing/validation/python/testimonials/t-models.py.png)
+
+</details>
+
+<details>
+<summary>forms.py</summary>
+
+* ![forms.py](./media/testing/validation/python/testimonials/t-forms.py.png)
 
 </details>
 
@@ -642,6 +665,13 @@ For testing the python files I used [Code Institutes CI Python Linter](https://p
 <summary>profiles-country_field.js</summary>
 
 * ![profiles-country_field.js](./media/testing/validation/js/profiles-country_field.js.png)
+
+</details>
+
+<details>
+<summary>JS at the bottom of index.html</summary>
+
+* ![profiles-country_field.js](./media/testing/validation/js/index-js.png)
 
 </details>
 
