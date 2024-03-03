@@ -476,7 +476,7 @@ The product management page provides a simple form for adding new products. The 
 ## Profile
 
 The user profile page features an H1 title "Profile" serving as the main heading. The layout is divided into two sections for user convenience.
-On the left, users can easily update their information, including details like phone number and delivery address. A button labeled "Update Information" makes it easy to modify your details. On the right, a separate section displays the user's previous order history, providing a quick overview of past purchases.
+On the left, users can easily update their information, including details like phone number and delivery address. A button labeled "Update Information" makes it easy to modify your details. On the right, a separate section displays the user's previous order history, providing a quick overview of past purchases. Underneath, there is a section called "My Testimonials" that shows your testimonials of the site. If you haven't left any testimonials yet, it will prompt you with the message: "It looks like you haven't left us a testimonial yet. Would you like to leave one?" along with a button labeled "Leave a Testimonial" to encourage users to share their thoughts.
 
 <details>
 <summary>Desktop & Mobile View</summary>
@@ -484,6 +484,10 @@ On the left, users can easily update their information, including details like p
 * ![Profile](./media/readme/features/profile/profile-1.png)
 * ![Profile](./media/readme/features/profile-mobile.png)
 * ![Profile](./media/readme/features/profile-2-mobile.png)
+* ![Profile](./media/readme/features/testimonials/testimonials_profile.png)
+* ![Profile](./media/readme/features/testimonials/testimonials_profile_mobile.png)
+* ![Profile](./media/readme/features/testimonials/testimonial_profile2.png)
+* ![Profile](./media/readme/features/testimonials/testimonials_profile_mobile2.png)
 
 </details>
 
@@ -535,6 +539,42 @@ After successfully completing your order, you're welcomed with a H1: "THANK YOU 
 * ![Checkout Success](./media/readme/features/basket/checkout_success.png)
 * ![Checkout Success](./media/readme/features/checkout-success-mobile.png)
 * ![Checkout Success](./media/readme/features/checkout-success-2-mobile.png)
+
+</details>
+
+## Add Testimonial
+
+Users can share their experience easily. They are prompted to write a review in a text box and rate their experience using a dropdown menu. After writing and rating, they can submit their testimonial with a click on the "Submit" button.
+
+<details>
+<summary>Desktop & Mobile View</summary>
+
+* ![Add Testimonial](./media/readme/features/testimonials/add_testimonial.png)
+* ![Add Testimonial](./media/readme/features/testimonials/add_testimonial_mobile.png)
+
+</details>
+
+## Edit Testimonial
+
+Users can update your testimonial just type in your changes in the text box and pick a new star rating from the dropdown menu. Once you are done click the "update" button to update your testimonial.
+
+<details>
+<summary>Desktop & Mobile View</summary>
+
+* ![Edit Testimonial](./media/readme/features/testimonials/edit_testimonial.png)
+* ![Edit Testimonial](./media/readme/features/testimonials/edit_testimonial_mobile.png)
+
+</details>
+
+## Delete Testimonial
+
+If you choose to delete your testimonial, you'll see a confirmation page asking, "Are you sure you want to delete your testimonial?" You will have two options: "Delete" to proceed or "Return" to go back to your profile.
+
+<details>
+<summary>Desktop & Mobile View</summary>
+
+* ![Delete Testimonial](./media/readme/features/testimonials/delete_testimonial.png)
+* ![Delete Testimonial](./media/readme/features/testimonials/delete_testimonial_mobile.png)
 
 </details>
 
