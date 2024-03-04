@@ -242,6 +242,30 @@
 | :---| :---| :---| :---| :---|
 | Sign Out Button | The user clicks the button | The user logged out and is redirected to the home page | Pass | Pass
 
+### Add Testimonial
+
+| Feature | User Action | Expected Result | Desktop Pass/Fail | Mobile Pass/Fail
+| :---| :---| :---| :---| :---|
+| Testimonial Text Box | The user clicks into the text area | The user can type and leave a review | Pass | Pass
+| Rating Dropdown Menu | The user clicks the drop down menu | The user can pick a rating between 1 and 5 | Pass | Pass
+| Submit Button | The user clicks the button | The testimonial is posted to the site | Pass | Pass
+
+### Edit Testimonial
+
+| Feature | User Action | Expected Result | Desktop Pass/Fail | Mobile Pass/Fail
+| :---| :---| :---| :---| :---|
+| Testimonial Text Box | The user clicks into the text area | The user can type and edit the review | Pass | Pass
+| Rating Dropdown Menu | The user clicks the drop down menu | The user can pick a rating between 1 and 5 | Pass | Pass
+| Update Button | The user clicks the button | The testimonial is updated and posted to the site | Pass | Pass
+
+### Delete Testimonial
+
+| Feature | User Action | Expected Result | Desktop Pass/Fail | Mobile Pass/Fail
+| :---| :---| :---| :---| :---|
+| Delete Button | The user clicks the button | The testimonial is deleted | Pass | Pass
+| Return Button | The user clicks the button | The user is redirected back to the profile page | Pass | Pass
+
+
 [Back to top](#testing)
 
 ## Validation
