@@ -629,4 +629,8 @@ footer {
     .social-media h3 {
         font-size: 18px;
     }
+
+    .review-cont {
+        margin-top: 50px;
+    }
 }
