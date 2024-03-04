@@ -531,7 +531,7 @@ The Checkout page is divided into two sections. On the left, you'll find fields 
 
 ## Checkout Success
 
-After successfully completing your order, you're welcomed with a H1: "THANK YOU FOR SHOPPING WITH RETRO CLASSICS." underneath , you will find your order information. A confirmation email has been sent to [email address]. The page includes details such as your order summary, billing information, and the delivery address. This confirmation ensures you have all the necessary information for your purchase. Below your order innformation there is a button called Check Out Our Sale!.
+After successfully completing your order, you're welcomed with a H1: "THANK YOU FOR SHOPPING WITH RETRO CLASSICS." underneath , you will find your order information. A confirmation email has been sent to [email address]. The page includes details such as your order summary, billing information, and the delivery address. This confirmation ensures you have all the necessary information for your purchase. Below your order information there is a button called "Check Out Our Sale!".
 
 <details>
 <summary>Desktop & Mobile View</summary>
@@ -539,6 +539,13 @@ After successfully completing your order, you're welcomed with a H1: "THANK YOU 
 * ![Checkout Success](./media/readme/features/basket/checkout_success.png)
 * ![Checkout Success](./media/readme/features/checkout-success-mobile.png)
 * ![Checkout Success](./media/readme/features/checkout-success-2-mobile.png)
+
+</details>
+
+<details>
+<summary>Order Confirmation Email</summary>
+
+* ![Checkout Success](./media/readme/features/basket/order-confirmation.png)
 
 </details>
 
