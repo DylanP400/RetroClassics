@@ -697,10 +697,17 @@ Testing results are in [TESTING.md](TESTING.md).
 | I encountered an issue with the placement of a background image on index.html. I had the background image within the body tag, but it wasn't positioned correctly on the page and I faced problems with the tint applied over the image. In an attempt to resolve this, I experimented with placing the background image around the entire page. However, I encountered issues with sizing—either the image was too large, too small, or not displaying at all. To address this, I decided to place the image within a ```<div>``` element with the class darken-img and the id bg-img. Surprisingly, the image was positioned perfectly with basic CSS styles. However, I noticed that the darken effect on the image had disappeared. To address this, I duplicated the ```<div class="darken-img" id="bg-img">``` and placed it underneath the original one. Strangely, if I removed the bg-img from the class, either the darken effect or the background image would vanish. As a temporary solution, I left the class declared twice to maintain the desired appearance. | Open |
 | When you click edit on a product a toast pops up telling you that "You updated (Product)" this toast should say you are editing (product) | Open |
 | I have noticed sometimes when I login on mobile I get a 403 error but once I hit back I am brought to the home page and I am logged in I have displayed a screenshot below | Open
+| Just before submiting I have noticed a bug when a user has more than one testimonial left on the site in their profile the edit and delete buttons for the testimonials increase with the number of testimonials. I have decided to leave this bug in over fear of causing more bugs and having the re-test my code. I have left an image below for reference | Open |
 
 <details><summary>403 bug Screenshot</summary>
 
 ![Bug](./media/readme/bug.png)
+
+</details>
+
+<details><summary>Testimonial edit/delete buttons bug in profile</summary>
+
+![Bug](./media/readme/new-bug.png)
 
 </details>
 
